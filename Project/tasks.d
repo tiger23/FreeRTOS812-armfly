@@ -1,0 +1,9 @@
+.\tasks.o: ..\FreeRTOS\tasks.c
+.\tasks.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stdlib.h
+.\tasks.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\string.h
+.\tasks.o: ..\FreeRTOS\include\FreeRTOS.h
+.\tasks.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stddef.h
+.\tasks.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stdint.h
+.\tasks.o: ..\bsp\FreeRTOSConfig.h
+.\tasks.o: ..\FreeRTOS\include\projdefs.h
+.\tasks.o: ..\FreeRTOS\include\portable.h

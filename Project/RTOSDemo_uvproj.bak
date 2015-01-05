@@ -361,7 +361,7 @@
               <MiscControls></MiscControls>
               <Define>RVDS_ARMCM3_LM3S102</Define>
               <Undefine></Undefine>
-              <IncludePath>..\CORTEX_STM32F103_Keil;..\Libraries\STM32F10x_StdPeriph_Driver\inc;..\FreeRTOS\include;..\bsp\Common\include</IncludePath>
+              <IncludePath>..\CORTEX_STM32F103_Keil;..\Libraries\STM32F10x_StdPeriph_Driver\inc;..\bsp\Common\include;..\FreeRTOS\include;..\FreeRTOS\portable\RVDS\ARM_CM3</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -403,13 +403,6 @@
       <Groups>
         <Group>
           <GroupName>bsp</GroupName>
-          <Files>
-            <File>
-              <FileName>lcd.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Common\drivers\ST\STM32F10xFWLib\src\lcd.c</FilePath>
-            </File>
-          </Files>
         </Group>
         <Group>
           <GroupName>Demo Files</GroupName>

@@ -361,7 +361,7 @@
               <MiscControls></MiscControls>
               <Define>RVDS_ARMCM3_LM3S102</Define>
               <Undefine></Undefine>
-              <IncludePath>..\CORTEX_STM32F103_Keil;..\Libraries\STM32F10x_StdPeriph_Driver\inc;..\FreeRTOS\include;..\bsp\Common\include</IncludePath>
+              <IncludePath>..\CORTEX_STM32F103_Keil;..\bsp\Common\include;..\FreeRTOS\include;..\FreeRTOS\portable\RVDS\ARM_CM3;..\bsp;..\Libraries\STM32F10x_StdPeriph_Driver\inc;..\Libraries\STM32F10x_StdPeriph_Driver</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -408,56 +408,6 @@
           <GroupName>Demo Files</GroupName>
           <Files>
             <File>
-              <FileName>ParTest.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\ParTest\ParTest.c</FilePath>
-            </File>
-            <File>
-              <FileName>serial.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\serial\serial.c</FilePath>
-            </File>
-            <File>
-              <FileName>semtest.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Common\Minimal\semtest.c</FilePath>
-            </File>
-            <File>
-              <FileName>BlockQ.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Common\Minimal\BlockQ.c</FilePath>
-            </File>
-            <File>
-              <FileName>blocktim.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Common\Minimal\blocktim.c</FilePath>
-            </File>
-            <File>
-              <FileName>comtest.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Common\Minimal\comtest.c</FilePath>
-            </File>
-            <File>
-              <FileName>death.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Common\Minimal\death.c</FilePath>
-            </File>
-            <File>
-              <FileName>flash.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Common\Minimal\flash.c</FilePath>
-            </File>
-            <File>
-              <FileName>integer.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Common\Minimal\integer.c</FilePath>
-            </File>
-            <File>
-              <FileName>PollQ.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Common\Minimal\PollQ.c</FilePath>
-            </File>
-            <File>
               <FileName>FreeRTOSConfig.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\bsp\FreeRTOSConfig.h</FilePath>
@@ -482,26 +432,61 @@
               <FileType>1</FileType>
               <FilePath>..\bsp\timertest.c</FilePath>
             </File>
+            <File>
+              <FileName>ParTest.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\bsp\ParTest\ParTest.c</FilePath>
+            </File>
+            <File>
+              <FileName>serial.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\bsp\serial\serial.c</FilePath>
+            </File>
+            <File>
+              <FileName>semtest.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\bsp\Common\Minimal\semtest.c</FilePath>
+            </File>
+            <File>
+              <FileName>BlockQ.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\bsp\Common\Minimal\BlockQ.c</FilePath>
+            </File>
+            <File>
+              <FileName>blocktim.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\bsp\Common\Minimal\blocktim.c</FilePath>
+            </File>
+            <File>
+              <FileName>comtest.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\bsp\Common\Minimal\comtest.c</FilePath>
+            </File>
+            <File>
+              <FileName>death.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\bsp\Common\Minimal\death.c</FilePath>
+            </File>
+            <File>
+              <FileName>flash.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\bsp\Common\Minimal\flash.c</FilePath>
+            </File>
+            <File>
+              <FileName>integer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\bsp\Common\Minimal\integer.c</FilePath>
+            </File>
+            <File>
+              <FileName>PollQ.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\bsp\Common\Minimal\PollQ.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
           <GroupName>FreeRTOS files</GroupName>
           <Files>
-            <File>
-              <FileName>tasks.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\Source\tasks.c</FilePath>
-            </File>
-            <File>
-              <FileName>list.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\Source\list.c</FilePath>
-            </File>
-            <File>
-              <FileName>queue.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\Source\queue.c</FilePath>
-            </File>
             <File>
               <FileName>croutine.c</FileName>
               <FileType>1</FileType>
@@ -511,6 +496,21 @@
               <FileName>timers.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\FreeRTOS\timers.c</FilePath>
+            </File>
+            <File>
+              <FileName>list.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\FreeRTOS\list.c</FilePath>
+            </File>
+            <File>
+              <FileName>queue.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\FreeRTOS\queue.c</FilePath>
+            </File>
+            <File>
+              <FileName>tasks.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\FreeRTOS\tasks.c</FilePath>
             </File>
           </Files>
         </Group>
