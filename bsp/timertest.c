@@ -69,9 +69,9 @@
 #include "FreeRTOS.h"
 
 /* Library includes. */
-#include "stm32f10x_lib.h"
+#include "stm32f10x.h"
 #include "stm32f10x_tim.h"
-#include "stm32f10x_map.h"
+//#include "stm32f10x_map.h"
 
 /* The set frequency of the interrupt.  Deviations from this are measured as
 the jitter. */
@@ -139,7 +139,7 @@ NVIC_InitTypeDef NVIC_InitStructure;
 	TIM_ARRPreloadConfig( TIM3, ENABLE );
 	
 	/* Enable TIM2 IT.  TIM3 does not generate an interrupt. */
-	NVIC_InitStructure.NVIC_IRQChannel = TIM2_IRQChannel;
+	NVIC_InitStructure.NVIC_IRQChannel = TIM2_IRQn;
 	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
 	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = timerHIGHEST_PRIORITY;
 	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;

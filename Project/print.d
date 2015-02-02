@@ -1,0 +1,12 @@
+.\print.o: ..\FreeRTOS\Common\Full\print.c
+.\print.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stdlib.h
+.\print.o: ..\FreeRTOS\Source\include\FreeRTOS.h
+.\print.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stddef.h
+.\print.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stdint.h
+.\print.o: ..\app\FreeRTOSConfig.h
+.\print.o: ..\FreeRTOS\Source\include\projdefs.h
+.\print.o: ..\FreeRTOS\Source\include\portable.h
+.\print.o: ..\FreeRTOS\Source\include\../../Source/portable/RVDS/ARM_CM3/portmacro.h
+.\print.o: ..\FreeRTOS\Source\include\mpu_wrappers.h
+.\print.o: ..\FreeRTOS\Source\include\queue.h
+.\print.o: ..\FreeRTOS\Common\include\print.h

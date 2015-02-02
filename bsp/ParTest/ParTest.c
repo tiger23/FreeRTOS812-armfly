@@ -73,7 +73,7 @@
 #include "partest.h"
 
 /* Library includes. */
-#include "stm32f10x_lib.h"
+#include "stm32f10x.h"
 
 #define partstMAX_OUTPUT_LED	( 4 )
 #define partstFIRST_LED			GPIO_Pin_6

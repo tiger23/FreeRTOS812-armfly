@@ -73,7 +73,7 @@
 #include "semphr.h"
 
 /* Library includes. */
-#include "stm32f10x_lib.h"
+#include "stm32f10x.h"
 
 /* Demo application includes. */
 #include "serial.h"
@@ -104,6 +104,7 @@ xComPortHandle xSerialPortInitMinimal( unsigned long ulWantedBaud, unsigned port
 {
 xComPortHandle xReturn;
 USART_InitTypeDef USART_InitStructure;
+	USART_ClockInitTypeDef USART_ClockInitStructure;
 NVIC_InitTypeDef NVIC_InitStructure;
 GPIO_InitTypeDef GPIO_InitStructure;
 
@@ -135,16 +136,18 @@ GPIO_InitTypeDef GPIO_InitStructure;
 		USART_InitStructure.USART_Parity = USART_Parity_No ;
 		USART_InitStructure.USART_HardwareFlowControl = USART_HardwareFlowControl_None;
 		USART_InitStructure.USART_Mode = USART_Mode_Rx | USART_Mode_Tx;
-		USART_InitStructure.USART_Clock = USART_Clock_Disable;
-		USART_InitStructure.USART_CPOL = USART_CPOL_Low;
-		USART_InitStructure.USART_CPHA = USART_CPHA_2Edge;
-		USART_InitStructure.USART_LastBit = USART_LastBit_Disable;
+		
+		USART_ClockInitStructure.USART_Clock = USART_Clock_Disable;
+		USART_ClockInitStructure.USART_CPOL = USART_CPOL_Low;
+		USART_ClockInitStructure.USART_CPHA = USART_CPHA_2Edge;
+		USART_ClockInitStructure.USART_LastBit = USART_LastBit_Disable;
 		
 		USART_Init( USART1, &USART_InitStructure );
+		USART_ClockInit( USART1, &USART_ClockInitStructure );
 		
 		USART_ITConfig( USART1, USART_IT_RXNE, ENABLE );
 		
-		NVIC_InitStructure.NVIC_IRQChannel = USART1_IRQChannel;
+		NVIC_InitStructure.NVIC_IRQChannel = USART1_IRQn;
 		NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = configLIBRARY_KERNEL_INTERRUPT_PRIORITY;
 		NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
 		NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;

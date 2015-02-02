@@ -1,8 +1,11 @@
-.\list.o: ..\FreeRTOS\list.c
+.\list.o: ..\FreeRTOS\Source\list.c
 .\list.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stdlib.h
-.\list.o: ..\FreeRTOS\include\FreeRTOS.h
+.\list.o: ..\FreeRTOS\Source\include\FreeRTOS.h
 .\list.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stddef.h
 .\list.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stdint.h
-.\list.o: ..\bsp\FreeRTOSConfig.h
-.\list.o: ..\FreeRTOS\include\projdefs.h
-.\list.o: ..\FreeRTOS\include\portable.h
+.\list.o: ..\app\FreeRTOSConfig.h
+.\list.o: ..\FreeRTOS\Source\include\projdefs.h
+.\list.o: ..\FreeRTOS\Source\include\portable.h
+.\list.o: ..\FreeRTOS\Source\include\../../Source/portable/RVDS/ARM_CM3/portmacro.h
+.\list.o: ..\FreeRTOS\Source\include\mpu_wrappers.h
+.\list.o: ..\FreeRTOS\Source\include\list.h
