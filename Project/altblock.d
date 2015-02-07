@@ -1,0 +1,13 @@
+.\altblock.o: ..\FreeRTOS\Common\Minimal\AltBlock.c
+.\altblock.o: ..\FreeRTOS\Source\include\FreeRTOS.h
+.\altblock.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stddef.h
+.\altblock.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stdint.h
+.\altblock.o: ..\app\FreeRTOSConfig.h
+.\altblock.o: ..\FreeRTOS\Source\include\projdefs.h
+.\altblock.o: ..\FreeRTOS\Source\include\portable.h
+.\altblock.o: ..\FreeRTOS\Source\include\../../Source/portable/RVDS/ARM_CM3/portmacro.h
+.\altblock.o: ..\FreeRTOS\Source\include\mpu_wrappers.h
+.\altblock.o: ..\FreeRTOS\Source\include\task.h
+.\altblock.o: ..\FreeRTOS\Source\include\list.h
+.\altblock.o: ..\FreeRTOS\Source\include\queue.h
+.\altblock.o: ..\FreeRTOS\Common\include\AltBlock.h

@@ -1,0 +1,14 @@
+.\comtest_strings.o: ..\FreeRTOS\Common\Minimal\comtest_strings.c
+.\comtest_strings.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stdlib.h
+.\comtest_strings.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\string.h
+.\comtest_strings.o: ..\FreeRTOS\Source\include\FreeRTOS.h
+.\comtest_strings.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stddef.h
+.\comtest_strings.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stdint.h
+.\comtest_strings.o: ..\app\FreeRTOSConfig.h
+.\comtest_strings.o: ..\FreeRTOS\Source\include\projdefs.h
+.\comtest_strings.o: ..\FreeRTOS\Source\include\portable.h
+.\comtest_strings.o: ..\FreeRTOS\Source\include\../../Source/portable/RVDS/ARM_CM3/portmacro.h
+.\comtest_strings.o: ..\FreeRTOS\Source\include\mpu_wrappers.h
+.\comtest_strings.o: ..\FreeRTOS\Source\include\task.h
+.\comtest_strings.o: ..\FreeRTOS\Source\include\list.h
+.\comtest_strings.o: ..\FreeRTOS\Source\include\timers.h

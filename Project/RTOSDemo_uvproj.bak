@@ -359,7 +359,7 @@
             <useXO>0</useXO>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>STM32F10X_HD,USE_STDPERIPH_DRIVER</Define>
+              <Define>STM32F10X_HD,USE_STDPERIPH_DRIVER,RVDS_ARMCM3_LM3S102</Define>
               <Undefine></Undefine>
               <IncludePath>..\CORTEX_STM32F103_Keil;..\bsp;..\Libraries\STM32F10x_StdPeriph_Driver\inc;..\Libraries\STM32F10x_StdPeriph_Driver;..\FreeRTOS\Source\include;..\FreeRTOS\Source\portable\MemMang;..\FreeRTOS\Source\portable\RVDS\ARM_CM3;..\FreeRTOS\Common\include;..\app</IncludePath>
             </VariousControls>
@@ -444,6 +444,11 @@
               <FileType>1</FileType>
               <FilePath>..\bsp\lcd.c</FilePath>
             </File>
+            <File>
+              <FileName>timertest.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\bsp\timertest.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -460,64 +465,154 @@
               <FilePath>..\app\FreeRTOSConfig.h</FilePath>
             </File>
             <File>
-              <FileName>BlockQ.c</FileName>
+              <FileName>AsciiLib.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\FreeRTOS\Common\Full\BlockQ.c</FilePath>
+              <FilePath>..\app\AsciiLib.c</FilePath>
             </File>
             <File>
-              <FileName>comtest.c</FileName>
+              <FileName>ParTest.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\FreeRTOS\Common\Full\comtest.c</FilePath>
+              <FilePath>..\bsp\ParTest\ParTest.c</FilePath>
+            </File>
+            <File>
+              <FileName>AltBlckQ.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\FreeRTOS\Common\Minimal\AltBlckQ.c</FilePath>
+            </File>
+            <File>
+              <FileName>AltBlock.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\FreeRTOS\Common\Minimal\AltBlock.c</FilePath>
+            </File>
+            <File>
+              <FileName>AltPollQ.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\FreeRTOS\Common\Minimal\AltPollQ.c</FilePath>
+            </File>
+            <File>
+              <FileName>AltQTest.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\FreeRTOS\Common\Minimal\AltQTest.c</FilePath>
+            </File>
+            <File>
+              <FileName>BlockQ.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\FreeRTOS\Common\Minimal\BlockQ.c</FilePath>
+            </File>
+            <File>
+              <FileName>blocktim.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\FreeRTOS\Common\Minimal\blocktim.c</FilePath>
+            </File>
+            <File>
+              <FileName>comtest_strings.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\FreeRTOS\Common\Minimal\comtest_strings.c</FilePath>
+            </File>
+            <File>
+              <FileName>countsem.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\FreeRTOS\Common\Minimal\countsem.c</FilePath>
+            </File>
+            <File>
+              <FileName>crflash.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\FreeRTOS\Common\Minimal\crflash.c</FilePath>
+            </File>
+            <File>
+              <FileName>crhook.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\FreeRTOS\Common\Minimal\crhook.c</FilePath>
             </File>
             <File>
               <FileName>death.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\FreeRTOS\Common\Full\death.c</FilePath>
+              <FilePath>..\FreeRTOS\Common\Minimal\death.c</FilePath>
             </File>
             <File>
               <FileName>dynamic.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\FreeRTOS\Common\Full\dynamic.c</FilePath>
+              <FilePath>..\FreeRTOS\Common\Minimal\dynamic.c</FilePath>
             </File>
             <File>
-              <FileName>events.c</FileName>
+              <FileName>EventGroupsDemo.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\FreeRTOS\Common\Full\events.c</FilePath>
+              <FilePath>..\FreeRTOS\Common\Minimal\EventGroupsDemo.c</FilePath>
             </File>
             <File>
               <FileName>flash.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\FreeRTOS\Common\Full\flash.c</FilePath>
+              <FilePath>..\FreeRTOS\Common\Minimal\flash.c</FilePath>
+            </File>
+            <File>
+              <FileName>flash_timer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\FreeRTOS\Common\Minimal\flash_timer.c</FilePath>
             </File>
             <File>
               <FileName>flop.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\FreeRTOS\Common\Full\flop.c</FilePath>
+              <FilePath>..\FreeRTOS\Common\Minimal\flop.c</FilePath>
+            </File>
+            <File>
+              <FileName>GenQTest.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\FreeRTOS\Common\Minimal\GenQTest.c</FilePath>
             </File>
             <File>
               <FileName>integer.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\FreeRTOS\Common\Full\integer.c</FilePath>
+              <FilePath>..\FreeRTOS\Common\Minimal\integer.c</FilePath>
+            </File>
+            <File>
+              <FileName>IntQueue.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\FreeRTOS\Common\Minimal\IntQueue.c</FilePath>
             </File>
             <File>
               <FileName>PollQ.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\FreeRTOS\Common\Full\PollQ.c</FilePath>
+              <FilePath>..\FreeRTOS\Common\Minimal\PollQ.c</FilePath>
             </File>
             <File>
-              <FileName>print.c</FileName>
+              <FileName>QPeek.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\FreeRTOS\Common\Full\print.c</FilePath>
+              <FilePath>..\FreeRTOS\Common\Minimal\QPeek.c</FilePath>
+            </File>
+            <File>
+              <FileName>QueueOverwrite.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\FreeRTOS\Common\Minimal\QueueOverwrite.c</FilePath>
+            </File>
+            <File>
+              <FileName>QueueSet.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\FreeRTOS\Common\Minimal\QueueSet.c</FilePath>
+            </File>
+            <File>
+              <FileName>recmutex.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\FreeRTOS\Common\Minimal\recmutex.c</FilePath>
             </File>
             <File>
               <FileName>semtest.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\FreeRTOS\Common\Full\semtest.c</FilePath>
+              <FilePath>..\FreeRTOS\Common\Minimal\semtest.c</FilePath>
             </File>
             <File>
-              <FileName>AsciiLib.c</FileName>
+              <FileName>sp_flop.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\app\AsciiLib.c</FilePath>
+              <FilePath>..\FreeRTOS\Common\Minimal\sp_flop.c</FilePath>
+            </File>
+            <File>
+              <FileName>TimerDemo.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\FreeRTOS\Common\Minimal\TimerDemo.c</FilePath>
+            </File>
+            <File>
+              <FileName>comtest.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\FreeRTOS\Common\Minimal\comtest.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -683,6 +778,11 @@
               <FileName>stm32f10x_wwdg.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_wwdg.c</FilePath>
+            </File>
+            <File>
+              <FileName>system_stm32f10x.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Libraries\STM32F10x_StdPeriph_Driver\system_stm32f10x.c</FilePath>
             </File>
           </Files>
         </Group>

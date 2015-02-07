@@ -1,6 +1,5 @@
-.\comtest.o: ..\FreeRTOS\Common\Full\comtest.c
+.\comtest.o: ..\FreeRTOS\Common\Minimal\comtest.c
 .\comtest.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stdlib.h
-.\comtest.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\string.h
 .\comtest.o: ..\FreeRTOS\Source\include\FreeRTOS.h
 .\comtest.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stddef.h
 .\comtest.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stdint.h
@@ -13,4 +12,4 @@
 .\comtest.o: ..\FreeRTOS\Source\include\list.h
 .\comtest.o: ..\FreeRTOS\Common\include\serial.h
 .\comtest.o: ..\FreeRTOS\Common\include\comtest.h
-.\comtest.o: ..\FreeRTOS\Common\include\print.h
+.\comtest.o: ..\FreeRTOS\Common\include\partest.h

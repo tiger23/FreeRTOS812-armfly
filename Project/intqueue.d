@@ -1,0 +1,14 @@
+.\intqueue.o: ..\FreeRTOS\Common\Minimal\IntQueue.c
+.\intqueue.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\string.h
+.\intqueue.o: ..\FreeRTOS\Source\include\FreeRTOS.h
+.\intqueue.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stddef.h
+.\intqueue.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stdint.h
+.\intqueue.o: ..\app\FreeRTOSConfig.h
+.\intqueue.o: ..\FreeRTOS\Source\include\projdefs.h
+.\intqueue.o: ..\FreeRTOS\Source\include\portable.h
+.\intqueue.o: ..\FreeRTOS\Source\include\../../Source/portable/RVDS/ARM_CM3/portmacro.h
+.\intqueue.o: ..\FreeRTOS\Source\include\mpu_wrappers.h
+.\intqueue.o: ..\FreeRTOS\Source\include\queue.h
+.\intqueue.o: ..\FreeRTOS\Source\include\task.h
+.\intqueue.o: ..\FreeRTOS\Source\include\list.h
+.\intqueue.o: ..\FreeRTOS\Common\include\IntQueue.h

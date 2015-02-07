@@ -50,7 +50,7 @@ Section Cross References
     main.o(.text) refers to queue.o(.text) for xQueueGenericReceive
     main.o(.text) refers to printf8.o(i.__0printf$8) for __2printf
     main.o(.text) refers to tasks.o(.text) for xTaskGetTickCount
-    main.o(.text) refers to blockq.o(.text) for xAreBlockingQueuesStillRunning
+    main.o(.text) refers to blocktim.o(.text) for xAreBlockTimeTestTasksStillRunning
     main.o(.text) refers to semtest.o(.text) for xAreSemaphoreTasksStillRunning
     main.o(.text) refers to pollq.o(.text) for xArePollingQueuesStillRunning
     main.o(.text) refers to death.o(.text) for xIsCreateTaskStillRunning
@@ -66,40 +66,34 @@ Section Cross References
     main.o(.text) refers to main.o(.data) for xLCDQueue
     main.o(.text) refers to main.o(.bss) for cPassMessage
     main.o(.text) refers to timertest.o(.data) for usMaxJitter
-    blockq.o(.text) refers to print.o(.text) for vPrintDisplayMessage
-    blockq.o(.text) refers to queue.o(.text) for xQueueGenericReceive
-    blockq.o(.text) refers to heap_2.o(.text) for pvPortMalloc
-    blockq.o(.text) refers to tasks.o(.text) for xTaskGenericCreate
-    blockq.o(.text) refers to blockq.o(.data) for sBlockingConsumerCount
-    comtest.o(.text) refers to print.o(.text) for vPrintDisplayMessage
-    comtest.o(.text) refers to serial.o(.text) for xSerialGetChar
-    comtest.o(.text) refers to strlen.o(.text) for strlen
-    comtest.o(.text) refers to tasks.o(.text) for xTaskGetTickCount
-    comtest.o(.text) refers to comtest.o(.data) for xPort
-    comtest.o(.text) refers to comtest.o(.constdata) for pcMessageToExchange
-    comtest.o(.constdata) refers to comtest.o(.conststring) for .conststring
+    asciilib.o(.text) refers to memcpya.o(.text) for __aeabi_memcpy
+    asciilib.o(.text) refers to asciilib.o(.constdata) for AsciiLib
+    partest.o(.text) refers to stm32f10x_gpio.o(.text) for GPIO_Init
+    partest.o(.text) refers to tasks.o(.text) for vTaskSuspendAll
+    partest.o(.text) refers to partest.o(.data) for usOutputValue
+    altblock.o(.text) refers to tasks.o(.text) for vTaskSuspend
+    altblock.o(.text) refers to port.o(.text) for vPortEnterCritical
+    altblock.o(.text) refers to queue.o(.text) for xQueueGenericCreate
+    altblock.o(.text) refers to altblock.o(.data) for xRunIndicator
+    altpollq.o(.text) refers to port.o(.text) for vPortEnterCritical
+    altpollq.o(.text) refers to tasks.o(.text) for vTaskDelay
+    altpollq.o(.text) refers to queue.o(.text) for uxQueueMessagesWaiting
+    altpollq.o(.text) refers to altpollq.o(.data) for xPollingProducerCount
+    blocktim.o(.text) refers to tasks.o(.text) for vTaskSuspend
+    blocktim.o(.text) refers to queue.o(.text) for xQueueGenericSend
+    blocktim.o(.text) refers to blocktim.o(.data) for xRunIndicator
     death.o(.text) refers to tasks.o(.text) for vTaskDelay
-    death.o(.text) refers to print.o(.text) for vPrintDisplayMessage
     death.o(.text) refers to heap_2.o(.text) for vPortFree
     death.o(.text) refers to death.o(.data) for xCreatedTask1
     dynamic.o(.text) refers to tasks.o(.text) for vTaskSuspend
-    dynamic.o(.text) refers to print.o(.text) for vPrintDisplayMessage
     dynamic.o(.text) refers to port.o(.text) for vPortEnterCritical
     dynamic.o(.text) refers to queue.o(.text) for xQueueGenericReceive
     dynamic.o(.text) refers to dynamic.o(.data) for ulPrioritySetCounter
-    events.o(.text) refers to print.o(.text) for vPrintDisplayMessage
-    events.o(.text) refers to queue.o(.text) for xQueueGenericReceive
-    events.o(.text) refers to memcmp.o(.text) for memcmp
-    events.o(.text) refers to tasks.o(.text) for vTaskSuspend
-    events.o(.text) refers to events.o(.data) for xQueue
-    events.o(.text) refers to events.o(.bss) for xExpectedTaskCounters
-    flash.o(.text) refers to print.o(.text) for vPrintDisplayMessage
     flash.o(.text) refers to tasks.o(.text) for vTaskDelay
     flash.o(.text) refers to partest.o(.text) for vParTestToggleLED
     flash.o(.text) refers to heap_2.o(.text) for pvPortMalloc
     flash.o(.text) refers to flash.o(.constdata) for pcTaskStartMsg
     flash.o(.constdata) refers to flash.o(.conststring) for .conststring
-    flop.o(.text) refers to print.o(.text) for vPrintDisplayMessage
     flop.o(.text) refers to heap_2.o(.text) for pvPortMalloc
     flop.o(.text) refers to dfltui.o(.text) for __aeabi_ui2d
     flop.o(.text) refers to dmul.o(.text) for __aeabi_dmul
@@ -109,30 +103,40 @@ Section Cross References
     flop.o(.text) refers to ddiv.o(.text) for __aeabi_ddiv
     flop.o(.text) refers to tasks.o(.text) for xTaskGenericCreate
     flop.o(.text) refers to flop.o(.bss) for usTaskCheck
-    integer.o(.text) refers to print.o(.text) for vPrintDisplayMessage
+    genqtest.o(.text) refers to tasks.o(.text) for vTaskSuspend
+    genqtest.o(.text) refers to queue.o(.text) for xQueueGenericReceive
+    genqtest.o(.text) refers to genqtest.o(.data) for xErrorDetected
     integer.o(.text) refers to heap_2.o(.text) for pvPortMalloc
     integer.o(.text) refers to port.o(.text) for vPortYield
     integer.o(.text) refers to tasks.o(.text) for xTaskGenericCreate
     integer.o(.text) refers to integer.o(.bss) for usTaskCheck
-    pollq.o(.text) refers to print.o(.text) for vPrintDisplayMessage
     pollq.o(.text) refers to queue.o(.text) for xQueueGenericSend
     pollq.o(.text) refers to tasks.o(.text) for vTaskDelay
     pollq.o(.text) refers to pollq.o(.data) for sPollingProducerCount
-    print.o(.text) refers to queue.o(.text) for xQueueGenericCreate
-    print.o(.text) refers to print.o(.data) for xPrintQueue
+    qpeek.o(.text) refers to queue.o(.text) for xQueueGenericReceive
+    qpeek.o(.text) refers to tasks.o(.text) for vTaskSuspend
+    qpeek.o(.text) refers to qpeek.o(.data) for xErrorDetected
+    queueoverwrite.o(.text) refers to queue.o(.text) for xQueueGenericCreate
+    queueoverwrite.o(.text) refers to tasks.o(.text) for xTaskGenericCreate
+    queueoverwrite.o(.text) refers to queueoverwrite.o(.data) for ulLoopCounter
+    queueset.o(.text) refers to queue.o(.text) for xQueueGenericCreate
+    queueset.o(.text) refers to tasks.o(.text) for vTaskResume
+    queueset.o(.text) refers to port.o(.text) for vPortEnterCritical
+    queueset.o(.text) refers to queueset.o(.data) for ulExpectedReceivedFromISR
+    queueset.o(.text) refers to queueset.o(.bss) for xQueues
+    recmutex.o(.text) refers to tasks.o(.text) for vTaskResume
+    recmutex.o(.text) refers to recmutex.o(.data) for xMutex
     semtest.o(.text) refers to port.o(.text) for vPortEnterCritical
-    semtest.o(.text) refers to print.o(.text) for vPrintDisplayMessage
     semtest.o(.text) refers to queue.o(.text) for xQueueGenericReceive
     semtest.o(.text) refers to tasks.o(.text) for vTaskDelay
     semtest.o(.text) refers to heap_2.o(.text) for pvPortMalloc
     semtest.o(.text) refers to semtest.o(.data) for sNextCheckVariable
     semtest.o(.text) refers to semtest.o(.constdata) for pcSemaphoreTaskStart
     semtest.o(.constdata) refers to semtest.o(.conststring) for .conststring
-    asciilib.o(.text) refers to memcpya.o(.text) for __aeabi_memcpy
-    asciilib.o(.text) refers to asciilib.o(.constdata) for AsciiLib
-    partest.o(.text) refers to stm32f10x_gpio.o(.text) for GPIO_Init
-    partest.o(.text) refers to tasks.o(.text) for vTaskSuspendAll
-    partest.o(.text) refers to partest.o(.data) for usOutputValue
+    comtest.o(.text) refers to serial.o(.text) for xSerialGetChar
+    comtest.o(.text) refers to partest.o(.text) for vParTestToggleLED
+    comtest.o(.text) refers to tasks.o(.text) for xTaskGetTickCount
+    comtest.o(.text) refers to comtest.o(.data) for xPort
     croutine.o(.text) refers to list.o(.text) for vListInitialise
     croutine.o(.text) refers to heap_2.o(.text) for pvPortMalloc
     croutine.o(.text) refers to port.o(.emb_text) for ulPortSetInterruptMask
@@ -485,17 +489,29 @@ Removing Unused input sections from the image.
     Removing timertest.o(.revsh_text), (4 bytes).
     Removing main.o(.rev16_text), (4 bytes).
     Removing main.o(.revsh_text), (4 bytes).
-    Removing dynamic.o(.text), (1364 bytes).
-    Removing dynamic.o(.data), (54 bytes).
-    Removing events.o(.text), (884 bytes).
-    Removing events.o(.bss), (48 bytes).
-    Removing events.o(.data), (16 bytes).
-    Removing flop.o(.text), (1400 bytes).
-    Removing flop.o(.bss), (32 bytes).
     Removing asciilib.o(.text), (32 bytes).
     Removing asciilib.o(.constdata), (1520 bytes).
     Removing partest.o(.rev16_text), (4 bytes).
     Removing partest.o(.revsh_text), (4 bytes).
+    Removing altblock.o(.text), (996 bytes).
+    Removing altblock.o(.data), (32 bytes).
+    Removing altpollq.o(.text), (296 bytes).
+    Removing altpollq.o(.data), (12 bytes).
+    Removing dynamic.o(.text), (1364 bytes).
+    Removing dynamic.o(.data), (54 bytes).
+    Removing flop.o(.text), (1400 bytes).
+    Removing flop.o(.bss), (32 bytes).
+    Removing genqtest.o(.text), (1640 bytes).
+    Removing genqtest.o(.data), (40 bytes).
+    Removing qpeek.o(.text), (832 bytes).
+    Removing qpeek.o(.data), (24 bytes).
+    Removing queueoverwrite.o(.text), (400 bytes).
+    Removing queueoverwrite.o(.data), (16 bytes).
+    Removing queueset.o(.text), (1152 bytes).
+    Removing queueset.o(.bss), (36 bytes).
+    Removing queueset.o(.data), (64 bytes).
+    Removing recmutex.o(.text), (632 bytes).
+    Removing recmutex.o(.data), (48 bytes).
     Removing croutine.o(.text), (752 bytes).
     Removing croutine.o(.bss), (100 bytes).
     Removing croutine.o(.data), (28 bytes).
@@ -573,7 +589,7 @@ Removing Unused input sections from the image.
     Removing depilogue.o(.text), (182 bytes).
     Removing dfixul.o(.text), (48 bytes).
 
-111 unused section(s) (total 33494 bytes) removed from the image.
+123 unused section(s) (total 38766 bytes) removed from the image.
 
 ==============================================================================
 
@@ -581,23 +597,23 @@ Memory Map of the image
 
   Image Entry point : 0x00000000
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x0000f620, Max: 0x00080000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x0000f46c, Max: 0x00080000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Base: 0x08000000, Size: 0x0000f518, Max: 0x00080000, ABSOLUTE)
+    Execution Region ER_IROM1 (Base: 0x08000000, Size: 0x0000f36c, Max: 0x00080000, ABSOLUTE)
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x08000000   0x00000130   Data   RO          756    RESET               startup_stm32f10x_hd.o
-    0x08000130   0x00000000   Code   RO         1399  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
-    0x08000130   0x00000004   Code   RO         1681    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
-    0x08000134   0x00000004   Code   RO         1684    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
-    0x08000138   0x00000000   Code   RO         1686    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
-    0x08000138   0x00000000   Code   RO         1688    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
-    0x08000138   0x00000008   Code   RO         1689    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
-    0x08000140   0x00000000   Code   RO         1691    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
-    0x08000140   0x00000000   Code   RO         1693    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
-    0x08000140   0x00000004   Code   RO         1682    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
-    0x08000144   0x000000a2   Code   RO         1366    .emb_text           port.o
+    0x08000000   0x00000130   Data   RO          842    RESET               startup_stm32f10x_hd.o
+    0x08000130   0x00000000   Code   RO         1485  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x08000130   0x00000004   Code   RO         1763    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x08000134   0x00000004   Code   RO         1766    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x08000138   0x00000000   Code   RO         1768    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x08000138   0x00000000   Code   RO         1770    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x08000138   0x00000008   Code   RO         1771    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x08000140   0x00000000   Code   RO         1773    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x08000140   0x00000000   Code   RO         1775    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x08000140   0x00000004   Code   RO         1764    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x08000144   0x000000a2   Code   RO         1452    .emb_text           port.o
     0x080001e6   0x00000002   PAD
     0x080001e8   0x00000588   Code   RO            3    .text               key.o
     0x08000770   0x000003d4   Code   RO          181    .text               spi_flash.o
@@ -606,59 +622,53 @@ Memory Map of the image
     0x08000d58   0x00000a50   Code   RO          306    .text               lcd.o
     0x080017a8   0x000000f8   Code   RO          339    .text               timertest.o
     0x080018a0   0x0000037c   Code   RO          362    .text               main.o
-    0x08001c1c   0x00000324   Code   RO          425    .text               blockq.o
-    0x08001f40   0x000002bc   Code   RO          451    .text               comtest.o
-    0x080021fc   0x00000184   Code   RO          474    .text               death.o
-    0x08002380   0x00000084   Code   RO          529    .text               flash.o
-    0x08002404   0x0000042c   Code   RO          566    .text               integer.o
-    0x08002830   0x00000210   Code   RO          580    .text               pollq.o
-    0x08002a40   0x00000038   Code   RO          594    .text               print.o
-    0x08002a78   0x00000214   Code   RO          608    .text               semtest.o
-    0x08002c8c   0x000000ac   Code   RO          641    .text               partest.o
-    0x08002d38   0x00000094   Code   RO          695    .text               list.o
-    0x08002dcc   0x00000558   Code   RO          707    .text               queue.o
-    0x08003324   0x00000ba4   Code   RO          719    .text               tasks.o
-    0x08003ec8   0x00000024   Code   RO          757    .text               startup_stm32f10x_hd.o
-    0x08003eec   0x000001e8   Code   RO          763    .text               misc.o
-    0x080040d4   0x000002e8   Code   RO         1030    .text               stm32f10x_exti.o
-    0x080043bc   0x00000dac   Code   RO         1076    .text               stm32f10x_fsmc.o
-    0x08005168   0x00000a84   Code   RO         1099    .text               stm32f10x_gpio.o
-    0x08005bec   0x00000844   Code   RO         1185    .text               stm32f10x_rcc.o
-    0x08006430   0x0000098c   Code   RO         1253    .text               stm32f10x_spi.o
-    0x08006dbc   0x0000377c   Code   RO         1276    .text               stm32f10x_tim.o
-    0x0800a538   0x00000dc4   Code   RO         1299    .text               stm32f10x_usart.o
-    0x0800b2fc   0x000001e0   Code   RO         1342    .text               system_stm32f10x.o
-    0x0800b4dc   0x000000d4   Code   RO         1367    .text               port.o
-    0x0800b5b0   0x00000124   Code   RO         1384    .text               heap_2.o
-    0x0800b6d4   0x00000024   Code   RO         1402    .text               mc_w.l(memcpya.o)
-    0x0800b6f8   0x0000000e   Code   RO         1404    .text               mc_w.l(strlen.o)
-    0x0800b706   0x00000062   Code   RO         1698    .text               mc_w.l(uldiv.o)
-    0x0800b768   0x0000001e   Code   RO         1700    .text               mc_w.l(llshl.o)
-    0x0800b786   0x00000002   PAD
-    0x0800b788   0x00000024   Code   RO         1709    .text               mc_w.l(init.o)
-    0x0800b7ac   0x00000020   Code   RO         1711    .text               mc_w.l(llushr.o)
-    0x0800b7cc   0x00000020   Code   RO         1617    i.__0printf$8       mc_w.l(printf8.o)
-    0x0800b7ec   0x00000028   Code   RO         1619    i.__0sprintf$8      mc_w.l(printf8.o)
-    0x0800b814   0x00000408   Code   RO         1624    i._printf_core      mc_w.l(printf8.o)
-    0x0800bc1c   0x00000024   Code   RO         1625    i._printf_post_padding  mc_w.l(printf8.o)
-    0x0800bc40   0x0000002e   Code   RO         1626    i._printf_pre_padding  mc_w.l(printf8.o)
-    0x0800bc6e   0x0000000a   Code   RO         1628    i._sputc            mc_w.l(printf8.o)
-    0x0800bc78   0x000011d0   Data   RO          307    .constdata          lcd.o
-    0x0800ce48   0x000025bf   Data   RO          364    .constdata          main.o
-    0x0800f407   0x00000001   PAD
-    0x0800f408   0x00000004   Data   RO          452    .constdata          comtest.o
-    0x0800f40c   0x00000004   Data   RO          530    .constdata          flash.o
-    0x0800f410   0x00000008   Data   RO          609    .constdata          semtest.o
-    0x0800f418   0x0000008b   Data   RO          453    .conststring        comtest.o
-    0x0800f4a3   0x00000001   PAD
-    0x0800f4a4   0x0000001a   Data   RO          531    .conststring        flash.o
-    0x0800f4be   0x00000002   PAD
-    0x0800f4c0   0x00000057   Data   RO          610    .conststring        semtest.o
-    0x0800f517   0x00000001   PAD
-    0x0800f518   0x00000000   Data   RO         1713    Region$$Table       anon$$obj.o
+    0x08001c1c   0x000000ac   Code   RO          441    .text               partest.o
+    0x08001cc8   0x000003c4   Code   RO          504    .text               blocktim.o
+    0x0800208c   0x00000184   Code   RO          518    .text               death.o
+    0x08002210   0x00000084   Code   RO          554    .text               flash.o
+    0x08002294   0x0000042c   Code   RO          608    .text               integer.o
+    0x080026c0   0x00000210   Code   RO          622    .text               pollq.o
+    0x080028d0   0x00000214   Code   RO          710    .text               semtest.o
+    0x08002ae4   0x00000148   Code   RO          727    .text               comtest.o
+    0x08002c2c   0x00000094   Code   RO          778    .text               list.o
+    0x08002cc0   0x00000558   Code   RO          790    .text               queue.o
+    0x08003218   0x00000ba4   Code   RO          805    .text               tasks.o
+    0x08003dbc   0x00000024   Code   RO          843    .text               startup_stm32f10x_hd.o
+    0x08003de0   0x000001e8   Code   RO          849    .text               misc.o
+    0x08003fc8   0x000002e8   Code   RO         1116    .text               stm32f10x_exti.o
+    0x080042b0   0x00000dac   Code   RO         1162    .text               stm32f10x_fsmc.o
+    0x0800505c   0x00000a84   Code   RO         1185    .text               stm32f10x_gpio.o
+    0x08005ae0   0x00000844   Code   RO         1271    .text               stm32f10x_rcc.o
+    0x08006324   0x0000098c   Code   RO         1339    .text               stm32f10x_spi.o
+    0x08006cb0   0x0000377c   Code   RO         1362    .text               stm32f10x_tim.o
+    0x0800a42c   0x00000dc4   Code   RO         1385    .text               stm32f10x_usart.o
+    0x0800b1f0   0x000001e0   Code   RO         1428    .text               system_stm32f10x.o
+    0x0800b3d0   0x000000d4   Code   RO         1453    .text               port.o
+    0x0800b4a4   0x00000124   Code   RO         1470    .text               heap_2.o
+    0x0800b5c8   0x00000024   Code   RO         1488    .text               mc_w.l(memcpya.o)
+    0x0800b5ec   0x00000062   Code   RO         1780    .text               mc_w.l(uldiv.o)
+    0x0800b64e   0x0000001e   Code   RO         1782    .text               mc_w.l(llshl.o)
+    0x0800b66c   0x00000024   Code   RO         1791    .text               mc_w.l(init.o)
+    0x0800b690   0x00000020   Code   RO         1793    .text               mc_w.l(llushr.o)
+    0x0800b6b0   0x00000020   Code   RO         1699    i.__0printf$8       mc_w.l(printf8.o)
+    0x0800b6d0   0x00000028   Code   RO         1701    i.__0sprintf$8      mc_w.l(printf8.o)
+    0x0800b6f8   0x00000408   Code   RO         1706    i._printf_core      mc_w.l(printf8.o)
+    0x0800bb00   0x00000024   Code   RO         1707    i._printf_post_padding  mc_w.l(printf8.o)
+    0x0800bb24   0x0000002e   Code   RO         1708    i._printf_pre_padding  mc_w.l(printf8.o)
+    0x0800bb52   0x0000000a   Code   RO         1710    i._sputc            mc_w.l(printf8.o)
+    0x0800bb5c   0x000011d0   Data   RO          307    .constdata          lcd.o
+    0x0800cd2c   0x000025bf   Data   RO          364    .constdata          main.o
+    0x0800f2eb   0x00000001   PAD
+    0x0800f2ec   0x00000004   Data   RO          555    .constdata          flash.o
+    0x0800f2f0   0x00000008   Data   RO          711    .constdata          semtest.o
+    0x0800f2f8   0x0000001a   Data   RO          556    .conststring        flash.o
+    0x0800f312   0x00000002   PAD
+    0x0800f314   0x00000057   Data   RO          712    .conststring        semtest.o
+    0x0800f36b   0x00000001   PAD
+    0x0800f36c   0x00000000   Data   RO         1795    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Base: 0x20000000, Size: 0x00004ab0, Max: 0x00010000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Base: 0x20000000, Size: 0x00004aa8, Max: 0x00010000, ABSOLUTE)
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -667,27 +677,25 @@ Memory Map of the image
     0x2000000c   0x00000008   Data   RW          340    .data               timertest.o
     0x20000014   0x00000009   Data   RW          365    .data               main.o
     0x2000001d   0x00000001   PAD
-    0x2000001e   0x00000018   Data   RW          426    .data               blockq.o
-    0x20000036   0x00000002   PAD
-    0x20000038   0x00000016   Data   RW          454    .data               comtest.o
-    0x2000004e   0x00000002   PAD
-    0x20000050   0x00000012   Data   RW          475    .data               death.o
-    0x20000062   0x00000002   PAD
-    0x20000064   0x0000000c   Data   RW          581    .data               pollq.o
-    0x20000070   0x00000004   Data   RW          595    .data               print.o
-    0x20000074   0x00000012   Data   RW          611    .data               semtest.o
-    0x20000086   0x00000002   Data   RW          642    .data               partest.o
-    0x20000088   0x00000038   Data   RW          721    .data               tasks.o
-    0x200000c0   0x00000014   Data   RW         1186    .data               stm32f10x_rcc.o
-    0x200000d4   0x00000014   Data   RW         1343    .data               system_stm32f10x.o
-    0x200000e8   0x00000004   Data   RW         1368    .data               port.o
-    0x200000ec   0x00000018   Data   RW         1386    .data               heap_2.o
-    0x20000104   0x00000004   Data   RW         1695    .data               mc_w.l(stdout.o)
-    0x20000108   0x000000a6   Zero   RW            4    .bss                key.o
-    0x200001ae   0x00000019   Zero   RW          363    .bss                main.o
-    0x200001c7   0x00000001   PAD
-    0x200001c8   0x00000020   Zero   RW          567    .bss                integer.o
-    0x200001e8   0x000000c8   Zero   RW          720    .bss                tasks.o
-    0x200002b0   0x00004400   Zero   RW         1385    .bss                heap_2.o
-    0x200046b0   0x00000400   Zero   RW          754    STACK               startup_stm32f10x_hd.o
+    0x2000001e   0x00000002   Data   RW          442    .data               partest.o
+    0x20000020   0x00000020   Data   RW          505    .data               blocktim.o
+    0x20000040   0x00000012   Data   RW          519    .data               death.o
+    0x20000052   0x00000002   PAD
+    0x20000054   0x0000000c   Data   RW          623    .data               pollq.o
+    0x20000060   0x00000012   Data   RW          713    .data               semtest.o
+    0x20000072   0x00000002   PAD
+    0x20000074   0x0000000c   Data   RW          728    .data               comtest.o
+    0x20000080   0x00000038   Data   RW          807    .data               tasks.o
+    0x200000b8   0x00000014   Data   RW         1272    .data               stm32f10x_rcc.o
+    0x200000cc   0x00000014   Data   RW         1429    .data               system_stm32f10x.o
+    0x200000e0   0x00000004   Data   RW         1454    .data               port.o
+    0x200000e4   0x00000018   Data   RW         1472    .data               heap_2.o
+    0x200000fc   0x00000004   Data   RW         1777    .data               mc_w.l(stdout.o)
+    0x20000100   0x000000a6   Zero   RW            4    .bss                key.o
+    0x200001a6   0x00000019   Zero   RW          363    .bss                main.o
+    0x200001bf   0x00000001   PAD
+    0x200001c0   0x00000020   Zero   RW          609    .bss                integer.o
+    0x200001e0   0x000000c8   Zero   RW          806    .bss                tasks.o
+    0x200002a8   0x00004400   Zero   RW         1471    .bss                heap_2.o
+    0x200046a8   0x00000400   Zero   RW          840    STACK               startup_stm32f10x_hd.o
 

@@ -1,0 +1,14 @@
+.\recmutex.o: ..\FreeRTOS\Common\Minimal\recmutex.c
+.\recmutex.o: ..\FreeRTOS\Source\include\FreeRTOS.h
+.\recmutex.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stddef.h
+.\recmutex.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stdint.h
+.\recmutex.o: ..\app\FreeRTOSConfig.h
+.\recmutex.o: ..\FreeRTOS\Source\include\projdefs.h
+.\recmutex.o: ..\FreeRTOS\Source\include\portable.h
+.\recmutex.o: ..\FreeRTOS\Source\include\../../Source/portable/RVDS/ARM_CM3/portmacro.h
+.\recmutex.o: ..\FreeRTOS\Source\include\mpu_wrappers.h
+.\recmutex.o: ..\FreeRTOS\Source\include\task.h
+.\recmutex.o: ..\FreeRTOS\Source\include\list.h
+.\recmutex.o: ..\FreeRTOS\Source\include\semphr.h
+.\recmutex.o: ..\FreeRTOS\Source\include\queue.h
+.\recmutex.o: ..\FreeRTOS\Common\include\recmutex.h

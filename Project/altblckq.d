@@ -1,0 +1,14 @@
+.\altblckq.o: ..\FreeRTOS\Common\Minimal\AltBlckQ.c
+.\altblckq.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stdlib.h
+.\altblckq.o: ..\FreeRTOS\Source\include\FreeRTOS.h
+.\altblckq.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stddef.h
+.\altblckq.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stdint.h
+.\altblckq.o: ..\app\FreeRTOSConfig.h
+.\altblckq.o: ..\FreeRTOS\Source\include\projdefs.h
+.\altblckq.o: ..\FreeRTOS\Source\include\portable.h
+.\altblckq.o: ..\FreeRTOS\Source\include\../../Source/portable/RVDS/ARM_CM3/portmacro.h
+.\altblckq.o: ..\FreeRTOS\Source\include\mpu_wrappers.h
+.\altblckq.o: ..\FreeRTOS\Source\include\task.h
+.\altblckq.o: ..\FreeRTOS\Source\include\list.h
+.\altblckq.o: ..\FreeRTOS\Source\include\queue.h
+.\altblckq.o: ..\FreeRTOS\Common\include\AltBlckQ.h
