@@ -1,9 +1,9 @@
 .\queueset.o: ..\FreeRTOS\Common\Minimal\QueueSet.c
-.\queueset.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stdlib.h
-.\queueset.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\limits.h
+.\queueset.o: f:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\queueset.o: f:\Keil\ARM\ARMCC\bin\..\include\limits.h
 .\queueset.o: ..\FreeRTOS\Source\include\FreeRTOS.h
-.\queueset.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stddef.h
-.\queueset.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stdint.h
+.\queueset.o: f:\Keil\ARM\ARMCC\bin\..\include\stddef.h
+.\queueset.o: f:\Keil\ARM\ARMCC\bin\..\include\stdint.h
 .\queueset.o: ..\app\FreeRTOSConfig.h
 .\queueset.o: ..\FreeRTOS\Source\include\projdefs.h
 .\queueset.o: ..\FreeRTOS\Source\include\portable.h

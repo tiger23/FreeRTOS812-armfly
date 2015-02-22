@@ -15,10 +15,11 @@
 #ifndef __LED_H__
 #define __LED_H__
 
-#include <rtthread.h>
+#include <stm32f10x.h>
 
-void rt_hw_led_init(void);
-void rt_hw_led_on(rt_uint32_t led);
-void rt_hw_led_off(rt_uint32_t led);
+void hw_led_on(uint32_t led);
+void hw_led_off(uint32_t led);
+void prvConfigureLED(void);
+void LED_Flash(void);
 
 #endif

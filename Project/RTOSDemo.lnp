@@ -1,7 +1,6 @@
 --cpu Cortex-M3
 ".\key.o"
 ".\led.o"
-".\spfd5420a.o"
 ".\spi_flash.o"
 ".\stm32f10x_it.o"
 ".\board.o"
@@ -27,6 +26,7 @@
 ".\recmutex.o"
 ".\semtest.o"
 ".\comtest.o"
+".\blockq.o"
 ".\croutine.o"
 ".\event_groups.o"
 ".\list.o"

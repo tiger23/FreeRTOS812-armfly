@@ -1,8 +1,8 @@
 .\genqtest.o: ..\FreeRTOS\Common\Minimal\GenQTest.c
-.\genqtest.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stdlib.h
+.\genqtest.o: f:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
 .\genqtest.o: ..\FreeRTOS\Source\include\FreeRTOS.h
-.\genqtest.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stddef.h
-.\genqtest.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stdint.h
+.\genqtest.o: f:\Keil\ARM\ARMCC\bin\..\include\stddef.h
+.\genqtest.o: f:\Keil\ARM\ARMCC\bin\..\include\stdint.h
 .\genqtest.o: ..\app\FreeRTOSConfig.h
 .\genqtest.o: ..\FreeRTOS\Source\include\projdefs.h
 .\genqtest.o: ..\FreeRTOS\Source\include\portable.h

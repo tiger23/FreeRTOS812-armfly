@@ -1,8 +1,8 @@
-.\dynamic.o: ..\FreeRTOS\Common\Full\dynamic.c
-.\dynamic.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stdlib.h
+.\dynamic.o: ..\FreeRTOS\Common\Minimal\dynamic.c
+.\dynamic.o: f:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
 .\dynamic.o: ..\FreeRTOS\Source\include\FreeRTOS.h
-.\dynamic.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stddef.h
-.\dynamic.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stdint.h
+.\dynamic.o: f:\Keil\ARM\ARMCC\bin\..\include\stddef.h
+.\dynamic.o: f:\Keil\ARM\ARMCC\bin\..\include\stdint.h
 .\dynamic.o: ..\app\FreeRTOSConfig.h
 .\dynamic.o: ..\FreeRTOS\Source\include\projdefs.h
 .\dynamic.o: ..\FreeRTOS\Source\include\portable.h
@@ -13,4 +13,3 @@
 .\dynamic.o: ..\FreeRTOS\Source\include\semphr.h
 .\dynamic.o: ..\FreeRTOS\Source\include\queue.h
 .\dynamic.o: ..\FreeRTOS\Common\include\dynamic.h
-.\dynamic.o: ..\FreeRTOS\Common\include\print.h

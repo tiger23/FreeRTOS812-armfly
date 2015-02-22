@@ -1,8 +1,8 @@
 .\altpollq.o: ..\FreeRTOS\Common\Minimal\AltPollQ.c
-.\altpollq.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stdlib.h
+.\altpollq.o: f:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
 .\altpollq.o: ..\FreeRTOS\Source\include\FreeRTOS.h
-.\altpollq.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stddef.h
-.\altpollq.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stdint.h
+.\altpollq.o: f:\Keil\ARM\ARMCC\bin\..\include\stddef.h
+.\altpollq.o: f:\Keil\ARM\ARMCC\bin\..\include\stdint.h
 .\altpollq.o: ..\app\FreeRTOSConfig.h
 .\altpollq.o: ..\FreeRTOS\Source\include\projdefs.h
 .\altpollq.o: ..\FreeRTOS\Source\include\portable.h

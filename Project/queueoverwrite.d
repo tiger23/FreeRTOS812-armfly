@@ -1,7 +1,7 @@
 .\queueoverwrite.o: ..\FreeRTOS\Common\Minimal\QueueOverwrite.c
 .\queueoverwrite.o: ..\FreeRTOS\Source\include\FreeRTOS.h
-.\queueoverwrite.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stddef.h
-.\queueoverwrite.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stdint.h
+.\queueoverwrite.o: f:\Keil\ARM\ARMCC\bin\..\include\stddef.h
+.\queueoverwrite.o: f:\Keil\ARM\ARMCC\bin\..\include\stdint.h
 .\queueoverwrite.o: ..\app\FreeRTOSConfig.h
 .\queueoverwrite.o: ..\FreeRTOS\Source\include\projdefs.h
 .\queueoverwrite.o: ..\FreeRTOS\Source\include\portable.h

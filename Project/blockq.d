@@ -1,8 +1,8 @@
-.\blockq.o: ..\FreeRTOS\Common\Full\BlockQ.c
-.\blockq.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stdlib.h
+.\blockq.o: ..\FreeRTOS\Common\Minimal\BlockQ.c
+.\blockq.o: f:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
 .\blockq.o: ..\FreeRTOS\Source\include\FreeRTOS.h
-.\blockq.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stddef.h
-.\blockq.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stdint.h
+.\blockq.o: f:\Keil\ARM\ARMCC\bin\..\include\stddef.h
+.\blockq.o: f:\Keil\ARM\ARMCC\bin\..\include\stdint.h
 .\blockq.o: ..\app\FreeRTOSConfig.h
 .\blockq.o: ..\FreeRTOS\Source\include\projdefs.h
 .\blockq.o: ..\FreeRTOS\Source\include\portable.h
@@ -12,4 +12,3 @@
 .\blockq.o: ..\FreeRTOS\Source\include\list.h
 .\blockq.o: ..\FreeRTOS\Source\include\queue.h
 .\blockq.o: ..\FreeRTOS\Common\include\BlockQ.h
-.\blockq.o: ..\FreeRTOS\Common\include\print.h

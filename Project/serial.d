@@ -1,7 +1,7 @@
 .\serial.o: ..\bsp\serial\serial.c
 .\serial.o: ..\FreeRTOS\Source\include\FreeRTOS.h
-.\serial.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stddef.h
-.\serial.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stdint.h
+.\serial.o: f:\Keil\ARM\ARMCC\bin\..\include\stddef.h
+.\serial.o: f:\Keil\ARM\ARMCC\bin\..\include\stdint.h
 .\serial.o: ..\app\FreeRTOSConfig.h
 .\serial.o: ..\FreeRTOS\Source\include\projdefs.h
 .\serial.o: ..\FreeRTOS\Source\include\portable.h
@@ -10,9 +10,9 @@
 .\serial.o: ..\FreeRTOS\Source\include\queue.h
 .\serial.o: ..\FreeRTOS\Source\include\semphr.h
 .\serial.o: ..\Libraries\STM32F10x_StdPeriph_Driver\stm32f10x.h
-.\serial.o: f:\Keil_v5\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cm3.h
-.\serial.o: f:\Keil_v5\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmInstr.h
-.\serial.o: f:\Keil_v5\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmFunc.h
+.\serial.o: f:\Keil\ARM\CMSIS\Include\core_cm3.h
+.\serial.o: f:\Keil\ARM\CMSIS\Include\core_cmInstr.h
+.\serial.o: f:\Keil\ARM\CMSIS\Include\core_cmFunc.h
 .\serial.o: ..\Libraries\STM32F10x_StdPeriph_Driver\system_stm32f10x.h
 .\serial.o: ..\bsp\stm32f10x_conf.h
 .\serial.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_adc.h

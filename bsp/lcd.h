@@ -96,9 +96,9 @@
 
 
 /* LCD Control pins */
-#define CtrlPin_NCS    GPIO_Pin_2   /* PB.02 */
-#define CtrlPin_RS     GPIO_Pin_7   /* PD.07 */
-#define CtrlPin_NWR    GPIO_Pin_15  /* PD.15 */
+#define CtrlPin_NCS    GPIO_Pin_12   /* PG.12 */
+#define CtrlPin_RS     GPIO_Pin_0   /* PF.00 */
+#define CtrlPin_NWR    GPIO_Pin_5  /* PD.05 */
 
 /* LCD color */
 #define White          0xFFFF
@@ -129,35 +129,35 @@
 /* Exported functions ------------------------------------------------------- */
 /*----- High layer function -----*/
 void LCD_Init(void);
-void LCD_SetTextColor(vu16 Color);
-void LCD_SetBackColor(vu16 Color);
-void LCD_ClearLine(u8 Line);
+void LCD_SetTextColor(__IO uint16_t Color);
+void LCD_SetBackColor(__IO uint16_t Color);
+void LCD_ClearLine(uint8_t Line);
 void LCD_Clear(void);
-void LCD_SetCursor(u8 Xpos, u16 Ypos);
-void LCD_DrawChar(u8 Xpos, u16 Ypos, uc16 *c);
-void LCD_DisplayChar(u8 Line, u16 Column, u8 Ascii);
-void LCD_DisplayStringLine(u8 Line, u8 *ptr);
-void LCD_DisplayString(u8 Line, u8 *ptr);
-void LCD_ScrollText(u8 Line, u8 *ptr);
-void LCD_SetDisplayWindow(u8 Xpos, u16 Ypos, u8 Height, u16 Width);
-void LCD_DrawLine(u8 Xpos, u16 Ypos, u16 Length, u8 Direction);
-void LCD_DrawRect(u8 Xpos, u16 Ypos, u8 Height, u16 Width);
-void LCD_DrawCircle(u8 Xpos, u16 Ypos, u16 Radius);
-void LCD_DrawMonoPict(uc32 *Pict);
-void LCD_DrawBMP(u32 BmpAddress);
+void LCD_SetCursor(uint8_t Xpos, uint16_t Ypos);
+void LCD_DrawChar(uint8_t Xpos, uint16_t Ypos, const uint16_t *c);
+void LCD_DisplayChar(uint8_t Line, uint16_t Column, uint8_t Ascii);
+void LCD_DisplayStringLine(uint8_t Line, uint8_t *ptr);
+void LCD_DisplayString(uint8_t Line, uint8_t *ptr);
+void LCD_ScrollText(uint8_t Line, uint8_t *ptr);
+void LCD_SetDisplayWindow(uint8_t Xpos, uint16_t Ypos, uint8_t Height, uint16_t Width);
+void LCD_DrawLine(uint8_t Xpos, uint16_t Ypos, uint16_t Length, uint8_t Direction);
+void LCD_DrawRect(uint8_t Xpos, uint16_t Ypos, uint8_t Height, uint16_t Width);
+void LCD_DrawCircle(uint8_t Xpos, uint16_t Ypos, uint16_t Radius);
+void LCD_DrawMonoPict(const uint32_t *Pict);
+void LCD_DrawBMP(uint32_t BmpAddress);
 
 /*----- Medium layer function -----*/
 void LCD_WriteReg(uint16_t LCD_Reg, uint16_t LCD_RegValue);
 uint16_t LCD_ReadReg(uint16_t LCD_Reg);
-void LCD_WriteRAM(u16 RGB_Code);
-u16  LCD_ReadRAM(void);
+void LCD_WriteRAM(uint16_t RGB_Code);
+uint16_t  LCD_ReadRAM(void);
 void LCD_PowerOn(void);
 void LCD_DisplayOn(void);
 void LCD_DisplayOff(void);
 
 /*----- Low layer function -----*/
 void LCD_CtrlLinesConfig(void);
-void LCD_CtrlLinesWrite(GPIO_TypeDef* GPIOx, u16 CtrlPins, BitAction BitVal);
+void LCD_CtrlLinesWrite(GPIO_TypeDef* GPIOx, uint16_t CtrlPins, BitAction BitVal);
 void LCD_SPIConfig(void);
 static void LCD_GPIOConfig(void);
 static void LCD_FSMCConfig(void);

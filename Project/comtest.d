@@ -1,8 +1,8 @@
 .\comtest.o: ..\FreeRTOS\Common\Minimal\comtest.c
-.\comtest.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stdlib.h
+.\comtest.o: f:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
 .\comtest.o: ..\FreeRTOS\Source\include\FreeRTOS.h
-.\comtest.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stddef.h
-.\comtest.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stdint.h
+.\comtest.o: f:\Keil\ARM\ARMCC\bin\..\include\stddef.h
+.\comtest.o: f:\Keil\ARM\ARMCC\bin\..\include\stdint.h
 .\comtest.o: ..\app\FreeRTOSConfig.h
 .\comtest.o: ..\FreeRTOS\Source\include\projdefs.h
 .\comtest.o: ..\FreeRTOS\Source\include\portable.h

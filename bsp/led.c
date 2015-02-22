@@ -11,8 +11,8 @@
  * Date           Author       Notes
  * 2009-01-05     Bernard      the first version
  */
-//#include <rtthread.h>
-#include <stm32f10x.h>
+#include "led.h"
+
 
 // led define
 #ifdef STM32_SIMULATOR
@@ -44,7 +44,7 @@
 
 #endif // led define #ifdef STM32_SIMULATOR
 
-void rt_hw_led_init(void)
+void prvConfigureLED(void)
 {
     GPIO_InitTypeDef GPIO_InitStructure;
 
@@ -58,7 +58,7 @@ void rt_hw_led_init(void)
     GPIO_SetBits(GPIOF,GPIO_Pin_6 | GPIO_Pin_7 | GPIO_Pin_8 | GPIO_Pin_9);
 }
 
-void rt_hw_led_off(uint32_t n)
+void hw_led_off(uint32_t n)
 {
     switch (n)
     {
@@ -79,7 +79,7 @@ void rt_hw_led_off(uint32_t n)
     }
 }
 
-void rt_hw_led_on(uint32_t n)
+void hw_led_on(uint32_t n)
 {
     switch (n)
     {
@@ -99,5 +99,4 @@ void rt_hw_led_on(uint32_t n)
         break;
     }
 }
-
 

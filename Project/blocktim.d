@@ -1,7 +1,7 @@
 .\blocktim.o: ..\FreeRTOS\Common\Minimal\blocktim.c
 .\blocktim.o: ..\FreeRTOS\Source\include\FreeRTOS.h
-.\blocktim.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stddef.h
-.\blocktim.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stdint.h
+.\blocktim.o: f:\Keil\ARM\ARMCC\bin\..\include\stddef.h
+.\blocktim.o: f:\Keil\ARM\ARMCC\bin\..\include\stdint.h
 .\blocktim.o: ..\app\FreeRTOSConfig.h
 .\blocktim.o: ..\FreeRTOS\Source\include\projdefs.h
 .\blocktim.o: ..\FreeRTOS\Source\include\portable.h

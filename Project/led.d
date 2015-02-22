@@ -1,9 +1,10 @@
 .\led.o: ..\bsp\led.c
+.\led.o: ..\bsp\led.h
 .\led.o: ..\Libraries\STM32F10x_StdPeriph_Driver\stm32f10x.h
-.\led.o: f:\Keil_v5\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cm3.h
-.\led.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stdint.h
-.\led.o: f:\Keil_v5\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmInstr.h
-.\led.o: f:\Keil_v5\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmFunc.h
+.\led.o: f:\Keil\ARM\CMSIS\Include\core_cm3.h
+.\led.o: f:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\led.o: f:\Keil\ARM\CMSIS\Include\core_cmInstr.h
+.\led.o: f:\Keil\ARM\CMSIS\Include\core_cmFunc.h
 .\led.o: ..\Libraries\STM32F10x_StdPeriph_Driver\system_stm32f10x.h
 .\led.o: ..\bsp\stm32f10x_conf.h
 .\led.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_adc.h

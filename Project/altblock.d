@@ -1,7 +1,7 @@
 .\altblock.o: ..\FreeRTOS\Common\Minimal\AltBlock.c
 .\altblock.o: ..\FreeRTOS\Source\include\FreeRTOS.h
-.\altblock.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stddef.h
-.\altblock.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stdint.h
+.\altblock.o: f:\Keil\ARM\ARMCC\bin\..\include\stddef.h
+.\altblock.o: f:\Keil\ARM\ARMCC\bin\..\include\stdint.h
 .\altblock.o: ..\app\FreeRTOSConfig.h
 .\altblock.o: ..\FreeRTOS\Source\include\projdefs.h
 .\altblock.o: ..\FreeRTOS\Source\include\portable.h

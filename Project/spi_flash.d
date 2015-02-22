@@ -1,10 +1,10 @@
 .\spi_flash.o: ..\bsp\spi_flash.c
 .\spi_flash.o: ..\bsp\spi_flash.h
 .\spi_flash.o: ..\Libraries\STM32F10x_StdPeriph_Driver\stm32f10x.h
-.\spi_flash.o: f:\Keil_v5\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cm3.h
-.\spi_flash.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stdint.h
-.\spi_flash.o: f:\Keil_v5\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmInstr.h
-.\spi_flash.o: f:\Keil_v5\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmFunc.h
+.\spi_flash.o: f:\Keil\ARM\CMSIS\Include\core_cm3.h
+.\spi_flash.o: f:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\spi_flash.o: f:\Keil\ARM\CMSIS\Include\core_cmInstr.h
+.\spi_flash.o: f:\Keil\ARM\CMSIS\Include\core_cmFunc.h
 .\spi_flash.o: ..\Libraries\STM32F10x_StdPeriph_Driver\system_stm32f10x.h
 .\spi_flash.o: ..\bsp\stm32f10x_conf.h
 .\spi_flash.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_adc.h

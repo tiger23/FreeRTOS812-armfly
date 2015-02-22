@@ -1,8 +1,8 @@
-.\death.o: ..\FreeRTOS\Common\Full\death.c
-.\death.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stdlib.h
+.\death.o: ..\FreeRTOS\Common\Minimal\death.c
+.\death.o: f:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
 .\death.o: ..\FreeRTOS\Source\include\FreeRTOS.h
-.\death.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stddef.h
-.\death.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stdint.h
+.\death.o: f:\Keil\ARM\ARMCC\bin\..\include\stddef.h
+.\death.o: f:\Keil\ARM\ARMCC\bin\..\include\stdint.h
 .\death.o: ..\app\FreeRTOSConfig.h
 .\death.o: ..\FreeRTOS\Source\include\projdefs.h
 .\death.o: ..\FreeRTOS\Source\include\portable.h
@@ -11,4 +11,3 @@
 .\death.o: ..\FreeRTOS\Source\include\task.h
 .\death.o: ..\FreeRTOS\Source\include\list.h
 .\death.o: ..\FreeRTOS\Common\include\death.h
-.\death.o: ..\FreeRTOS\Common\include\print.h

@@ -1,7 +1,7 @@
 .\recmutex.o: ..\FreeRTOS\Common\Minimal\recmutex.c
 .\recmutex.o: ..\FreeRTOS\Source\include\FreeRTOS.h
-.\recmutex.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stddef.h
-.\recmutex.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stdint.h
+.\recmutex.o: f:\Keil\ARM\ARMCC\bin\..\include\stddef.h
+.\recmutex.o: f:\Keil\ARM\ARMCC\bin\..\include\stdint.h
 .\recmutex.o: ..\app\FreeRTOSConfig.h
 .\recmutex.o: ..\FreeRTOS\Source\include\projdefs.h
 .\recmutex.o: ..\FreeRTOS\Source\include\portable.h

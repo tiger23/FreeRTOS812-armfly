@@ -1,9 +1,9 @@
 .\key.o: ..\bsp\key.c
 .\key.o: ..\Libraries\STM32F10x_StdPeriph_Driver\stm32f10x.h
-.\key.o: f:\Keil_v5\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cm3.h
-.\key.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stdint.h
-.\key.o: f:\Keil_v5\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmInstr.h
-.\key.o: f:\Keil_v5\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmFunc.h
+.\key.o: f:\Keil\ARM\CMSIS\Include\core_cm3.h
+.\key.o: f:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\key.o: f:\Keil\ARM\CMSIS\Include\core_cmInstr.h
+.\key.o: f:\Keil\ARM\CMSIS\Include\core_cmFunc.h
 .\key.o: ..\Libraries\STM32F10x_StdPeriph_Driver\system_stm32f10x.h
 .\key.o: ..\bsp\stm32f10x_conf.h
 .\key.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_adc.h
@@ -30,5 +30,5 @@
 .\key.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h
 .\key.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h
 .\key.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\misc.h
-.\key.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stdio.h
+.\key.o: f:\Keil\ARM\ARMCC\bin\..\include\stdio.h
 .\key.o: ..\bsp\key.h

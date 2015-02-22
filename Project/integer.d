@@ -1,8 +1,8 @@
-.\integer.o: ..\FreeRTOS\Common\Full\integer.c
-.\integer.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stdlib.h
+.\integer.o: ..\FreeRTOS\Common\Minimal\integer.c
+.\integer.o: f:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
 .\integer.o: ..\FreeRTOS\Source\include\FreeRTOS.h
-.\integer.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stddef.h
-.\integer.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stdint.h
+.\integer.o: f:\Keil\ARM\ARMCC\bin\..\include\stddef.h
+.\integer.o: f:\Keil\ARM\ARMCC\bin\..\include\stdint.h
 .\integer.o: ..\app\FreeRTOSConfig.h
 .\integer.o: ..\FreeRTOS\Source\include\projdefs.h
 .\integer.o: ..\FreeRTOS\Source\include\portable.h
@@ -10,5 +10,4 @@
 .\integer.o: ..\FreeRTOS\Source\include\mpu_wrappers.h
 .\integer.o: ..\FreeRTOS\Source\include\task.h
 .\integer.o: ..\FreeRTOS\Source\include\list.h
-.\integer.o: ..\FreeRTOS\Common\include\print.h
 .\integer.o: ..\FreeRTOS\Common\include\integer.h

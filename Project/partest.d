@@ -1,7 +1,7 @@
 .\partest.o: ..\bsp\ParTest\ParTest.c
 .\partest.o: ..\FreeRTOS\Source\include\FreeRTOS.h
-.\partest.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stddef.h
-.\partest.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stdint.h
+.\partest.o: f:\Keil\ARM\ARMCC\bin\..\include\stddef.h
+.\partest.o: f:\Keil\ARM\ARMCC\bin\..\include\stdint.h
 .\partest.o: ..\app\FreeRTOSConfig.h
 .\partest.o: ..\FreeRTOS\Source\include\projdefs.h
 .\partest.o: ..\FreeRTOS\Source\include\portable.h
@@ -11,9 +11,9 @@
 .\partest.o: ..\FreeRTOS\Source\include\list.h
 .\partest.o: ..\FreeRTOS\Common\include\partest.h
 .\partest.o: ..\Libraries\STM32F10x_StdPeriph_Driver\stm32f10x.h
-.\partest.o: f:\Keil_v5\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cm3.h
-.\partest.o: f:\Keil_v5\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmInstr.h
-.\partest.o: f:\Keil_v5\ARM\PACK\ARM\CMSIS\3.20.4\CMSIS\Include\core_cmFunc.h
+.\partest.o: f:\Keil\ARM\CMSIS\Include\core_cm3.h
+.\partest.o: f:\Keil\ARM\CMSIS\Include\core_cmInstr.h
+.\partest.o: f:\Keil\ARM\CMSIS\Include\core_cmFunc.h
 .\partest.o: ..\Libraries\STM32F10x_StdPeriph_Driver\system_stm32f10x.h
 .\partest.o: ..\bsp\stm32f10x_conf.h
 .\partest.o: ..\Libraries\STM32F10x_StdPeriph_Driver\inc\stm32f10x_adc.h

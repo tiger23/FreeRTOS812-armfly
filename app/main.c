@@ -21,11 +21,14 @@
 #include "FreeRTOS.h"
 #include "task.h"
 #include "queue.h"
+#include "FreeRTOSConfig.h"
 /* Library includes. */
+#include "stm32f10x_conf.h"
 #include "stm32f10x_it.h"
 
 /* Demo app includes. */
 #include "lcd.h"
+#include "led.h"
 #include "LCD_Message.h"
 #include "BlockQ.h"
 #include "death.h"
@@ -57,7 +60,7 @@
 #define mainMAX_LINE                        ( 240 )
 #define mainROW_INCREMENT                   ( 24 )
 #define mainMAX_COLUMN                      ( 20 )
-#define mainCOLUMN_START                    ( 319 )
+#define mainCOLUMN_START                    ( 399 )
 #define mainCOLUMN_INCREMENT                ( 16 )
 
 /* The maximum number of message that can be waiting for display at any one
@@ -103,6 +106,8 @@ static void prvConfigureLCD(void);
  */
 static void vLCDTask(void *pvParameters);
 
+static void vLEDTask(void *pvParameters);
+
 /*
  * Retargets the C library printf function to the USART.
  */
@@ -135,9 +140,7 @@ QueueHandle_t xLCDQueue;
 
 int main(void)
 {
-#ifdef DEBUG
-    debug();
-#endif
+
 
     prvSetupHardware();
 
@@ -146,25 +149,25 @@ int main(void)
     xLCDQueue = xQueueCreate(mainLCD_QUEUE_SIZE, sizeof(xLCDMessage));
 
     /* Start the standard demo tasks. */
-    vStartBlockingQueueTasks(mainBLOCK_Q_PRIORITY);
-    vCreateBlockTimeTasks();
-    vStartSemaphoreTasks(mainSEM_TEST_PRIORITY);
-    vStartPolledQueueTasks(mainQUEUE_POLL_PRIORITY);
-    vStartIntegerMathTasks(mainINTEGER_TASK_PRIORITY);
-    vStartLEDFlashTasks(mainFLASH_TASK_PRIORITY);
-    vAltStartComTestTasks(mainCOM_TEST_PRIORITY, mainCOM_TEST_BAUD_RATE, mainCOM_TEST_LED);
+//    vStartBlockingQueueTasks(mainBLOCK_Q_PRIORITY);
+//    vCreateBlockTimeTasks();
+//    vStartSemaphoreTasks(mainSEM_TEST_PRIORITY);
+//    vStartPolledQueueTasks(mainQUEUE_POLL_PRIORITY);
+//    vStartIntegerMathTasks(mainINTEGER_TASK_PRIORITY);
+//    vStartLEDFlashTasks(mainFLASH_TASK_PRIORITY);
+//    vAltStartComTestTasks(mainCOM_TEST_PRIORITY, mainCOM_TEST_BAUD_RATE, mainCOM_TEST_LED);
 
     /* Start the tasks defined within this file/specific to this demo. */
-    xTaskCreate(vCheckTask, "Check", mainCHECK_TASK_STACK_SIZE, NULL, mainCHECK_TASK_PRIORITY, NULL);
-    xTaskCreate(vLCDTask, "LCD", configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY, NULL);
-
+    //xTaskCreate(vCheckTask, "Check", mainCHECK_TASK_STACK_SIZE, NULL, mainCHECK_TASK_PRIORITY, NULL);
+    //xTaskCreate(vLCDTask, "LCD", configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY, NULL);
+    xTaskCreate(vLEDTask, "LED", configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY+4, NULL);
     /* The suicide tasks must be created last as they need to know how many
     tasks were running prior to their creation in order to ascertain whether
     or not the correct/expected number of tasks are running at any given time. */
-    vCreateSuicidalTasks(mainCREATOR_TASK_PRIORITY);
+    //vCreateSuicidalTasks(mainCREATOR_TASK_PRIORITY);
 
     /* Configure the timers used by the fast interrupt timer test. */
-    vSetupTimerTest();
+    //vSetupTimerTest();
 
     /* Start the scheduler. */
     vTaskStartScheduler();
@@ -193,6 +196,26 @@ void vLCDTask(void *pvParameters)
     }
 }
 /*-----------------------------------------------------------*/
+
+/*-----------------------------------------------------------*/
+
+void vLEDTask(void *pvParameters)
+{
+    xLCDMessage xMessage;
+
+    /* Initialise the LED and display a startup message. */
+    prvConfigureLED();
+    
+
+    for (;;)
+    {
+        hw_led_on(1);
+		vTaskDelay(10 / portTICK_PERIOD_MS);   /* Delay 10 ms */
+		hw_led_off(1);
+    }
+}
+/*-----------------------------------------------------------*/
+
 
 static void vCheckTask(void *pvParameters)
 {
@@ -297,7 +320,7 @@ static void prvSetupHardware(void)
 
     /* Enable GPIOA, GPIOB, GPIOC, GPIOD, GPIOE and AFIO clocks */
     RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA | RCC_APB2Periph_GPIOB | RCC_APB2Periph_GPIOC
-                           | RCC_APB2Periph_GPIOD | RCC_APB2Periph_GPIOE | RCC_APB2Periph_AFIO, ENABLE);
+                           | RCC_APB2Periph_GPIOD | RCC_APB2Periph_GPIOE | RCC_APB2Periph_GPIOF | RCC_APB2Periph_AFIO, ENABLE);
 
     /* SPI2 Periph clock enable */
     RCC_APB1PeriphClockCmd(RCC_APB1Periph_SPI2, ENABLE);
@@ -319,14 +342,14 @@ static void prvConfigureLCD(void)
 {
     GPIO_InitTypeDef GPIO_InitStructure;
 
-    /* Configure LCD Back Light (PA8) as output push-pull */
-    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_8;
+    /* Configure LCD Back Light (PB1) as output push-pull */
+    GPIO_InitStructure.GPIO_Pin = GPIO_Pin_1;
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
     GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;
-    GPIO_Init(GPIOA, &GPIO_InitStructure);
+    GPIO_Init(GPIOB, &GPIO_InitStructure);
 
     /* Set the Backlight Pin */
-    GPIO_WriteBit(GPIOA, GPIO_Pin_8, Bit_SET);
+    GPIO_WriteBit(GPIOB, GPIO_Pin_1, Bit_SET);
 
     /* Initialize the LCD */
     LCD_Init();
@@ -354,7 +377,7 @@ int fputc(int ch, FILE *f)
     if (ch != '\n')
     {
         /* Display one character on LCD */
-        LCD_DisplayChar(ucLine, usRefColumn, (u8) ch);
+        LCD_DisplayChar(ucLine, usRefColumn, (uint8_t) ch);
 
         /* Decrement the column position by 16 */
         usRefColumn -= mainCOLUMN_INCREMENT;
@@ -386,9 +409,9 @@ int fputc(int ch, FILE *f)
 }
 /*-----------------------------------------------------------*/
 
-#ifdef  DEBUG
+#ifdef USE_FULL_ASSERT
 /* Keep the linker happy. */
-void assert_failed(unsigned char *pcFile, unsigned long ulLine)
+void assert_failed(uint8_t *pcFile, uint32_t ulLine)
 {
     for (;;)
     {

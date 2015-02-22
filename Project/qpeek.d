@@ -1,8 +1,8 @@
 .\qpeek.o: ..\FreeRTOS\Common\Minimal\QPeek.c
-.\qpeek.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stdlib.h
+.\qpeek.o: f:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
 .\qpeek.o: ..\FreeRTOS\Source\include\FreeRTOS.h
-.\qpeek.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stddef.h
-.\qpeek.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stdint.h
+.\qpeek.o: f:\Keil\ARM\ARMCC\bin\..\include\stddef.h
+.\qpeek.o: f:\Keil\ARM\ARMCC\bin\..\include\stdint.h
 .\qpeek.o: ..\app\FreeRTOSConfig.h
 .\qpeek.o: ..\FreeRTOS\Source\include\projdefs.h
 .\qpeek.o: ..\FreeRTOS\Source\include\portable.h

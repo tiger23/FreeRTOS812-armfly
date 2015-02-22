@@ -475,11 +475,6 @@
               <FilePath>..\bsp\ParTest\ParTest.c</FilePath>
             </File>
             <File>
-              <FileName>AltBlckQ.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\FreeRTOS\Common\Minimal\AltBlckQ.c</FilePath>
-            </File>
-            <File>
               <FileName>AltBlock.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\FreeRTOS\Common\Minimal\AltBlock.c</FilePath>
@@ -490,39 +485,9 @@
               <FilePath>..\FreeRTOS\Common\Minimal\AltPollQ.c</FilePath>
             </File>
             <File>
-              <FileName>AltQTest.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\FreeRTOS\Common\Minimal\AltQTest.c</FilePath>
-            </File>
-            <File>
-              <FileName>BlockQ.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\FreeRTOS\Common\Minimal\BlockQ.c</FilePath>
-            </File>
-            <File>
               <FileName>blocktim.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\FreeRTOS\Common\Minimal\blocktim.c</FilePath>
-            </File>
-            <File>
-              <FileName>comtest_strings.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\FreeRTOS\Common\Minimal\comtest_strings.c</FilePath>
-            </File>
-            <File>
-              <FileName>countsem.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\FreeRTOS\Common\Minimal\countsem.c</FilePath>
-            </File>
-            <File>
-              <FileName>crflash.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\FreeRTOS\Common\Minimal\crflash.c</FilePath>
-            </File>
-            <File>
-              <FileName>crhook.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\FreeRTOS\Common\Minimal\crhook.c</FilePath>
             </File>
             <File>
               <FileName>death.c</FileName>
@@ -535,19 +500,9 @@
               <FilePath>..\FreeRTOS\Common\Minimal\dynamic.c</FilePath>
             </File>
             <File>
-              <FileName>EventGroupsDemo.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\FreeRTOS\Common\Minimal\EventGroupsDemo.c</FilePath>
-            </File>
-            <File>
               <FileName>flash.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\FreeRTOS\Common\Minimal\flash.c</FilePath>
-            </File>
-            <File>
-              <FileName>flash_timer.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\FreeRTOS\Common\Minimal\flash_timer.c</FilePath>
             </File>
             <File>
               <FileName>flop.c</FileName>
@@ -563,11 +518,6 @@
               <FileName>integer.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\FreeRTOS\Common\Minimal\integer.c</FilePath>
-            </File>
-            <File>
-              <FileName>IntQueue.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\FreeRTOS\Common\Minimal\IntQueue.c</FilePath>
             </File>
             <File>
               <FileName>PollQ.c</FileName>
@@ -600,19 +550,14 @@
               <FilePath>..\FreeRTOS\Common\Minimal\semtest.c</FilePath>
             </File>
             <File>
-              <FileName>sp_flop.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\FreeRTOS\Common\Minimal\sp_flop.c</FilePath>
-            </File>
-            <File>
-              <FileName>TimerDemo.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\FreeRTOS\Common\Minimal\TimerDemo.c</FilePath>
-            </File>
-            <File>
               <FileName>comtest.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\FreeRTOS\Common\Minimal\comtest.c</FilePath>
+            </File>
+            <File>
+              <FileName>BlockQ.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\FreeRTOS\Common\Minimal\BlockQ.c</FilePath>
             </File>
           </Files>
         </Group>

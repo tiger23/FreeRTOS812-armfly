@@ -1,8 +1,8 @@
-.\semtest.o: ..\FreeRTOS\Common\Full\semtest.c
-.\semtest.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stdlib.h
+.\semtest.o: ..\FreeRTOS\Common\Minimal\semtest.c
+.\semtest.o: f:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
 .\semtest.o: ..\FreeRTOS\Source\include\FreeRTOS.h
-.\semtest.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stddef.h
-.\semtest.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stdint.h
+.\semtest.o: f:\Keil\ARM\ARMCC\bin\..\include\stddef.h
+.\semtest.o: f:\Keil\ARM\ARMCC\bin\..\include\stdint.h
 .\semtest.o: ..\app\FreeRTOSConfig.h
 .\semtest.o: ..\FreeRTOS\Source\include\projdefs.h
 .\semtest.o: ..\FreeRTOS\Source\include\portable.h
@@ -13,4 +13,3 @@
 .\semtest.o: ..\FreeRTOS\Source\include\semphr.h
 .\semtest.o: ..\FreeRTOS\Source\include\queue.h
 .\semtest.o: ..\FreeRTOS\Common\include\semtest.h
-.\semtest.o: ..\FreeRTOS\Common\include\print.h

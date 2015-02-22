@@ -1,8 +1,8 @@
-.\flash.o: ..\FreeRTOS\Common\Full\flash.c
-.\flash.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stdlib.h
+.\flash.o: ..\FreeRTOS\Common\Minimal\flash.c
+.\flash.o: f:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
 .\flash.o: ..\FreeRTOS\Source\include\FreeRTOS.h
-.\flash.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stddef.h
-.\flash.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stdint.h
+.\flash.o: f:\Keil\ARM\ARMCC\bin\..\include\stddef.h
+.\flash.o: f:\Keil\ARM\ARMCC\bin\..\include\stdint.h
 .\flash.o: ..\app\FreeRTOSConfig.h
 .\flash.o: ..\FreeRTOS\Source\include\projdefs.h
 .\flash.o: ..\FreeRTOS\Source\include\portable.h
@@ -12,4 +12,3 @@
 .\flash.o: ..\FreeRTOS\Source\include\list.h
 .\flash.o: ..\FreeRTOS\Common\include\partest.h
 .\flash.o: ..\FreeRTOS\Common\include\flash.h
-.\flash.o: ..\FreeRTOS\Common\include\print.h
