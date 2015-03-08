@@ -45,15 +45,6 @@
 .\main.o: ..\bsp\lcd.h
 .\main.o: ..\bsp\led.h
 .\main.o: ..\bsp\LCD_Message.h
-.\main.o: ..\FreeRTOS\Common\include\BlockQ.h
-.\main.o: ..\FreeRTOS\Common\include\death.h
-.\main.o: ..\FreeRTOS\Common\include\integer.h
-.\main.o: ..\FreeRTOS\Common\include\blocktim.h
 .\main.o: ..\FreeRTOS\Common\include\partest.h
-.\main.o: ..\FreeRTOS\Common\include\semtest.h
-.\main.o: ..\FreeRTOS\Common\include\PollQ.h
-.\main.o: ..\FreeRTOS\Common\include\flash.h
-.\main.o: ..\FreeRTOS\Common\include\comtest2.h
-.\main.o: ..\FreeRTOS\Source\include\croutine.h
 .\main.o: ..\bsp\board.h
 .\main.o: ..\FreeRTOS\Source\include\semphr.h

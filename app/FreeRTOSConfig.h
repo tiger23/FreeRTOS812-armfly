@@ -82,7 +82,7 @@
 #define configUSE_IDLE_HOOK			0
 #define configUSE_TICK_HOOK			0
 #define configCPU_CLOCK_HZ			( ( unsigned long ) 72000000 )	
-#define configTICK_RATE_HZ			( ( TickType_t ) 1000 )
+#define configTICK_RATE_HZ			( ( portTickType ) 1000 )
 #define configMAX_PRIORITIES		( 5 )
 #define configMINIMAL_STACK_SIZE	( ( unsigned short ) 128 )
 #define configTOTAL_HEAP_SIZE		( ( size_t ) ( 17 * 1024 ) )
@@ -91,10 +91,12 @@
 #define configUSE_16_BIT_TICKS		0
 #define configIDLE_SHOULD_YIELD		1
 /*By astiger*/
-#define configUSE_ALTERNATIVE_API  1
-#define configUSE_MUTEXES  1
-#define configUSE_QUEUE_SETS  1
-#define configUSE_RECURSIVE_MUTEXES  1
+#define configUSE_ALTERNATIVE_API    0
+#define configUSE_MUTEXES            1
+#define configUSE_QUEUE_SETS         0
+#define configUSE_RECURSIVE_MUTEXES  0
+#define configUSE_COUNTING_SEMAPHORES  1
+#define configUSE_TIMERS             0
 
 /* Co-routine definitions. */
 #define configUSE_CO_ROUTINES 		0

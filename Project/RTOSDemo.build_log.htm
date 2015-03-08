@@ -4,22 +4,33 @@
 <h1>µVision Build Log</h1>
 <h2>Project:</h2>
 F:\GitHub\FreeRTOS812-armfly\Project\RTOSDemo.uvproj
-Project File Date:  02/08/2015
+Project File Date:  03/04/2015
 
 <h2>Output:</h2>
 Build target 'Target 1'
-compiling led.c...
 compiling main.c...
-..\app\main.c(204): warning:  #177-D: variable "xMessage" was declared but never referenced
-      xLCDMessage xMessage;
-..\app\main.c(181): warning:  #177-D: function "vLCDTask" was declared but never referenced
-  void vLCDTask(void *pvParameters)
-..\app\main.c(220): warning:  #177-D: function "vCheckTask" was declared but never referenced
+..\app\main.c(250): warning:  #223-D: function "xAreBlockingQueuesStillRunning" declared implicitly
+          if (xAreBlockingQueuesStillRunning() != pdTRUE)
+..\app\main.c(254): warning:  #223-D: function "xAreBlockTimeTestTasksStillRunning" declared implicitly
+          else if (xAreBlockTimeTestTasksStillRunning() != pdTRUE)
+..\app\main.c(258): warning:  #223-D: function "xAreSemaphoreTasksStillRunning" declared implicitly
+          else if (xAreSemaphoreTasksStillRunning() != pdTRUE)
+..\app\main.c(262): warning:  #223-D: function "xArePollingQueuesStillRunning" declared implicitly
+          else if (xArePollingQueuesStillRunning() != pdTRUE)
+..\app\main.c(266): warning:  #223-D: function "xIsCreateTaskStillRunning" declared implicitly
+          else if (xIsCreateTaskStillRunning() != pdTRUE)
+..\app\main.c(270): warning:  #223-D: function "xAreIntegerMathsTaskStillRunning" declared implicitly
+          else if (xAreIntegerMathsTaskStillRunning() != pdTRUE)
+..\app\main.c(274): warning:  #223-D: function "xAreComTestTasksStillRunning" declared implicitly
+          else if (xAreComTestTasksStillRunning() != pdTRUE)
+..\app\main.c(233): warning:  #177-D: function "vCheckTask" was declared but never referenced
   static void vCheckTask(void *pvParameters)
-..\app\main.c: 3 warnings, 0 errors
+..\app\main.c: 8 warnings, 0 errors
+compiling port.c...
+assembling port.s...
 linking...
-Program Size: Code=47418 RO-data=14562 RW-data=288 ZI-data=18824  
-".\RTOSDemo.axf" - 0 Error(s), 3 Warning(s).
+Program Size: Code=46618 RO-data=14562 RW-data=288 ZI-data=18312  
+".\RTOSDemo.axf" - 0 Error(s), 8 Warning(s).
 Load "F:\\GitHub\\FreeRTOS812-armfly\\Project\\RTOSDemo.axf" 
 Set JLink Project File to "F:\GitHub\FreeRTOS812-armfly\Project\JLinkSettings.ini"
 * JLink Info: Device "STM32F103ZE" selected (512 KB flash, 64 KB RAM).
@@ -57,15 +68,7 @@ Verify OK.
 </pre>
 </body>
 </html>
-..
-compiling stm32f10x_cec.c...
-compiling stm32f10x_crc.c...
-compiling stm32f10x_dac.c...
-compiling stm32f10x_dbgmcu.c...
-compiling stm32f10x_dma.c...
-compiling stm32f10x_exti.c...
-compiling stm32f10x_flash.c...
-compiling stm32f10x_fsmc.c...
+piling stm32f10x_fsmc.c...
 compiling stm32f10x_gpio.c...
 compiling stm32f10x_i2c.c...
 compiling stm32f10x_iwdg.c...
@@ -79,7 +82,42 @@ compiling stm32f10x_usart.c...
 compiling stm32f10x_wwdg.c...
 compiling system_stm32f10x.c...
 compiling port.c...
+assembling port.s...
 compiling heap_2.c...
 linking...
-Program Size: Code=47418 RO-data=14562 RW-data=288 ZI-data=18824  
-".\RTOSDemo.axf" - 0 Error(s), 5 Warning(s).
+Program Size: Code=46590 RO-data=14562 RW-data=288 ZI-data=18312  
+".\RTOSDemo.axf" - 0 Error(s), 9 Warning(s).
+Load "F:\\GitHub\\FreeRTOS812-armfly\\Project\\RTOSDemo.axf" 
+Set JLink Project File to "F:\GitHub\FreeRTOS812-armfly\Project\JLinkSettings.ini"
+* JLink Info: Device "STM32F103ZE" selected (512 KB flash, 64 KB RAM).
+ 
+JLink info:
+------------
+DLL: V4.78j, compiled Nov 22 2013 20:08:33
+Firmware: J-Link ARM V8 compiled Nov 25 2013 19:20:08
+Hardware: V8.00
+S/N : 68000531 
+Feature(s) : RDI, FlashDL, FlashBP, JFlash, GDBServer 
+ 
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: TotalIRLen = 9, IRPrint = 0x0011
+* JLink Info: Found Cortex-M3 r1p1, Little endian.
+* JLink Info: FPUnit: 6 code (BP) slots and 2 literal slots
+* JLink Info: TPIU fitted.
+* JLink Info: ETM fitted.
+ROMTableAddr = 0xE00FF003
+ 
+Target info:
+------------
+Device: STM32F103ZE
+VTarget = 3.313V
+State of Pins: 
+TCK: 1, TDI: 0, TDO: 0, TMS: 0, TRES: 1, TRST: 1
+Hardware-Breakpoints: 6
+Software-Breakpoints: 8192
+Watchpoints:          4
+JTAG speed: 2000 kHz
+ 
+Erase Done.
+Programming Done.
+Verify OK.
