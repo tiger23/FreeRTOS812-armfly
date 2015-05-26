@@ -1,11 +1,16 @@
 移植到ARMFLY开发板
 目录：
-+FreeRTOS
-+bsp
-+Project
-+Libraries
-  +CMSIS
-  +STM32F10x_StdPertiph_Driver
++ FreeRTOS
++ app
++ bsp
++ Project
++ Libraries
++ startup
++ CMSIS
+    + CMSIS_RTOS
+    + CoreSupport
+    + DeviceSupport
++ STM32F10x_StdPertiph_Driver
 
 Directories:
 

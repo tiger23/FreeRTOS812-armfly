@@ -44,7 +44,7 @@
             <NotGenerated>0</NotGenerated>
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
-          <OutputDirectory>.\</OutputDirectory>
+          <OutputDirectory>.\output\</OutputDirectory>
           <OutputName>RTOSDemo</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
@@ -139,9 +139,11 @@
             <RestoreFunctions>0</RestoreFunctions>
             <RestoreToolbox>1</RestoreToolbox>
             <RestoreTracepoints>0</RestoreTracepoints>
+            <RestoreTracepoints>1</RestoreTracepoints>
+            <RestoreTracepoints>1</RestoreTracepoints>
           </Target>
           <RunDebugAfterBuild>0</RunDebugAfterBuild>
-          <TargetSelection>7</TargetSelection>
+          <TargetSelection>6</TargetSelection>
           <SimDlls>
             <CpuDll></CpuDll>
             <CpuDllArguments></CpuDllArguments>
@@ -353,11 +355,13 @@
             <wLevel>0</wLevel>
             <uThumb>0</uThumb>
             <uSurpInc>0</uSurpInc>
+            <uC99>0</uC99>
+            <useXO>0</useXO>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>STM32F10X_HD,USE_STDPERIPH_DRIVER,RVDS_ARMCM3_LM3S102</Define>
+              <Define>STM32F10X_HD,USE_STDPERIPH_DRIVER,STM32F103xE</Define>
               <Undefine></Undefine>
-              <IncludePath>..\CORTEX_STM32F103_Keil;..\bsp;..\Libraries\STM32F10x_StdPeriph_Driver\inc;..\Libraries\STM32F10x_StdPeriph_Driver;..\FreeRTOS\Source\include;..\FreeRTOS\Source\portable\MemMang;..\FreeRTOS\Source\portable\RVDS\ARM_CM3;..\FreeRTOS\Common\include;..\app</IncludePath>
+              <IncludePath>..\bsp;..\FreeRTOS\Source\include;..\FreeRTOS\Source\portable\MemMang;..\FreeRTOS\Source\portable\RVDS\ARM_CM3;..\FreeRTOS\Common\include;..\app;..\app\Inc;..\CMSIS\CMSIS_RTOS;..\CMSIS\DeviceSupport\ST\STM32F10x;..\CMSIS\CoreSupport;..\STM32F10x_StdPeriph_Driver\inc</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -369,6 +373,7 @@
             <SwStkChk>0</SwStkChk>
             <NoWarn>0</NoWarn>
             <uSurpInc>0</uSurpInc>
+            <useXO>0</useXO>
             <VariousControls>
               <MiscControls></MiscControls>
               <Define></Define>
@@ -385,6 +390,7 @@
             <useFile>0</useFile>
             <TextAddressRange>0x08000000</TextAddressRange>
             <DataAddressRange>0x20000000</DataAddressRange>
+            <pXoBase></pXoBase>
             <ScatterFile></ScatterFile>
             <IncludeLibs></IncludeLibs>
             <IncludeLibsPath></IncludeLibsPath>
@@ -395,6 +401,16 @@
         </TargetArmAds>
       </TargetOption>
       <Groups>
+        <Group>
+          <GroupName>Startup</GroupName>
+          <Files>
+            <File>
+              <FileName>startup_stm32f103xe.s</FileName>
+              <FileType>2</FileType>
+              <FilePath>..\startup\startup_stm32f103xe.s</FilePath>
+            </File>
+          </Files>
+        </Group>
         <Group>
           <GroupName>bsp</GroupName>
           <Files>
@@ -412,11 +428,6 @@
               <FileName>spi_flash.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\bsp\spi_flash.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_it.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\bsp\stm32f10x_it.c</FilePath>
             </File>
             <File>
               <FileName>board.c</FileName>
@@ -438,21 +449,16 @@
               <FileType>1</FileType>
               <FilePath>..\bsp\timertest.c</FilePath>
             </File>
+            <File>
+              <FileName>stm32f1xx_it.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\app\Src\stm32f1xx_it.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
-          <GroupName>Demo Files</GroupName>
+          <GroupName>APP</GroupName>
           <Files>
-            <File>
-              <FileName>main.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\app\main.c</FilePath>
-            </File>
-            <File>
-              <FileName>FreeRTOSConfig.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\app\FreeRTOSConfig.h</FilePath>
-            </File>
             <File>
               <FileName>AsciiLib.c</FileName>
               <FileType>1</FileType>
@@ -528,16 +534,161 @@
               <FileType>1</FileType>
               <FilePath>..\FreeRTOS\Common\Minimal\BlockQ.c</FilePath>
             </File>
+            <File>
+              <FileName>FreeRTOSConfig.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\app\Inc\FreeRTOSConfig.h</FilePath>
+            </File>
+            <File>
+              <FileName>main.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\app\Src\main.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>CMSIS_Drivers</GroupName>
+          <Files>
+            <File>
+              <FileName>system_stm32f1xx.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\CMSIS\Device\ST\STM32F1xx\Source\Templates\system_stm32f1xx.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>CMSIS_RTOS</GroupName>
+          <Files>
+            <File>
+              <FileName>cmsis_os.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\CMSIS\CMSIS_RTOS\cmsis_os.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Liararies</GroupName>
+          <Files>
+            <File>
+              <FileName>misc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\STM32F10x_StdPeriph_Driver\src\misc.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_adc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\STM32F10x_StdPeriph_Driver\src\stm32f10x_adc.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_bkp.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\STM32F10x_StdPeriph_Driver\src\stm32f10x_bkp.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_can.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\STM32F10x_StdPeriph_Driver\src\stm32f10x_can.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_cec.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\STM32F10x_StdPeriph_Driver\src\stm32f10x_cec.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_crc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\STM32F10x_StdPeriph_Driver\src\stm32f10x_crc.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_dac.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\STM32F10x_StdPeriph_Driver\src\stm32f10x_dac.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_dbgmcu.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\STM32F10x_StdPeriph_Driver\src\stm32f10x_dbgmcu.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_dma.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\STM32F10x_StdPeriph_Driver\src\stm32f10x_dma.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_exti.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\STM32F10x_StdPeriph_Driver\src\stm32f10x_exti.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_flash.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\STM32F10x_StdPeriph_Driver\src\stm32f10x_flash.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_fsmc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\STM32F10x_StdPeriph_Driver\src\stm32f10x_fsmc.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_gpio.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_i2c.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\STM32F10x_StdPeriph_Driver\src\stm32f10x_i2c.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_iwdg.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\STM32F10x_StdPeriph_Driver\src\stm32f10x_iwdg.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_pwr.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\STM32F10x_StdPeriph_Driver\src\stm32f10x_pwr.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_rcc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_rtc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\STM32F10x_StdPeriph_Driver\src\stm32f10x_rtc.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_sdio.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\STM32F10x_StdPeriph_Driver\src\stm32f10x_sdio.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_spi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\STM32F10x_StdPeriph_Driver\src\stm32f10x_spi.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_tim.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_usart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_wwdg.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\STM32F10x_StdPeriph_Driver\src\stm32f10x_wwdg.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
           <GroupName>FreeRTOS files</GroupName>
           <Files>
-            <File>
-              <FileName>croutine.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\FreeRTOS\Source\croutine.c</FilePath>
-            </File>
             <File>
               <FileName>event_groups.c</FileName>
               <FileType>1</FileType>
@@ -562,141 +713,6 @@
               <FileName>timers.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\FreeRTOS\Source\timers.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>Liararies</GroupName>
-          <Files>
-            <File>
-              <FileName>core_cm3.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Libraries\CMSIS\CM3\CoreSupport\core_cm3.c</FilePath>
-            </File>
-            <File>
-              <FileName>startup_stm32f10x_hd.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>..\Libraries\CMSIS\CM3\DeviceSupport\ST\STM32F10x\startup\arm\startup_stm32f10x_hd.s</FilePath>
-            </File>
-            <File>
-              <FileName>misc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Libraries\STM32F10x_StdPeriph_Driver\src\misc.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_adc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_adc.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_bkp.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_bkp.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_can.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_can.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_cec.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_cec.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_crc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_crc.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_dac.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dac.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_dbgmcu.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dbgmcu.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_dma.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_dma.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_exti.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_exti.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_flash.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_flash.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_fsmc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_fsmc.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_gpio.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_gpio.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_i2c.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_i2c.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_iwdg.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_iwdg.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_pwr.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_pwr.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_rcc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_rtc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rtc.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_sdio.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_sdio.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_spi.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_spi.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_tim.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_usart.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_wwdg.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_wwdg.c</FilePath>
-            </File>
-            <File>
-              <FileName>system_stm32f10x.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Libraries\STM32F10x_StdPeriph_Driver\system_stm32f10x.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -739,6 +755,8 @@
                     <wLevel>0</wLevel>
                     <uThumb>2</uThumb>
                     <uSurpInc>2</uSurpInc>
+                    <uC99>2</uC99>
+                    <useXO>2</useXO>
                     <VariousControls>
                       <MiscControls></MiscControls>
                       <Define></Define>
@@ -755,9 +773,9 @@
               <FilePath>..\FreeRTOS\Source\portable\RVDS\ARM_CM3\portmacro.h</FilePath>
             </File>
             <File>
-              <FileName>heap_2.c</FileName>
+              <FileName>heap_4.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\FreeRTOS\Source\portable\MemMang\heap_2.c</FilePath>
+              <FilePath>..\FreeRTOS\Source\portable\MemMang\heap_4.c</FilePath>
             </File>
           </Files>
         </Group>

@@ -1,0 +1,14 @@
+.\output\blockq.o: ..\FreeRTOS\Common\Minimal\BlockQ.c
+.\output\blockq.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stdlib.h
+.\output\blockq.o: ..\FreeRTOS\Source\include\FreeRTOS.h
+.\output\blockq.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stddef.h
+.\output\blockq.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stdint.h
+.\output\blockq.o: ..\app\Inc\FreeRTOSConfig.h
+.\output\blockq.o: ..\FreeRTOS\Source\include\projdefs.h
+.\output\blockq.o: ..\FreeRTOS\Source\include\portable.h
+.\output\blockq.o: ..\FreeRTOS\Source\portable\RVDS\ARM_CM3\portmacro.h
+.\output\blockq.o: ..\FreeRTOS\Source\include\mpu_wrappers.h
+.\output\blockq.o: ..\FreeRTOS\Source\include\task.h
+.\output\blockq.o: ..\FreeRTOS\Source\include\list.h
+.\output\blockq.o: ..\FreeRTOS\Source\include\queue.h
+.\output\blockq.o: ..\FreeRTOS\Common\include\BlockQ.h

@@ -1,0 +1,14 @@
+.\output\pollq.o: ..\FreeRTOS\Common\Minimal\PollQ.c
+.\output\pollq.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stdlib.h
+.\output\pollq.o: ..\FreeRTOS\Source\include\FreeRTOS.h
+.\output\pollq.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stddef.h
+.\output\pollq.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stdint.h
+.\output\pollq.o: ..\app\Inc\FreeRTOSConfig.h
+.\output\pollq.o: ..\FreeRTOS\Source\include\projdefs.h
+.\output\pollq.o: ..\FreeRTOS\Source\include\portable.h
+.\output\pollq.o: ..\FreeRTOS\Source\portable\RVDS\ARM_CM3\portmacro.h
+.\output\pollq.o: ..\FreeRTOS\Source\include\mpu_wrappers.h
+.\output\pollq.o: ..\FreeRTOS\Source\include\task.h
+.\output\pollq.o: ..\FreeRTOS\Source\include\list.h
+.\output\pollq.o: ..\FreeRTOS\Source\include\queue.h
+.\output\pollq.o: ..\FreeRTOS\Common\include\PollQ.h

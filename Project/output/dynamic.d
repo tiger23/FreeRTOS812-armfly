@@ -1,0 +1,15 @@
+.\output\dynamic.o: ..\FreeRTOS\Common\Minimal\dynamic.c
+.\output\dynamic.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stdlib.h
+.\output\dynamic.o: ..\FreeRTOS\Source\include\FreeRTOS.h
+.\output\dynamic.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stddef.h
+.\output\dynamic.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stdint.h
+.\output\dynamic.o: ..\app\Inc\FreeRTOSConfig.h
+.\output\dynamic.o: ..\FreeRTOS\Source\include\projdefs.h
+.\output\dynamic.o: ..\FreeRTOS\Source\include\portable.h
+.\output\dynamic.o: ..\FreeRTOS\Source\portable\RVDS\ARM_CM3\portmacro.h
+.\output\dynamic.o: ..\FreeRTOS\Source\include\mpu_wrappers.h
+.\output\dynamic.o: ..\FreeRTOS\Source\include\task.h
+.\output\dynamic.o: ..\FreeRTOS\Source\include\list.h
+.\output\dynamic.o: ..\FreeRTOS\Source\include\semphr.h
+.\output\dynamic.o: ..\FreeRTOS\Source\include\queue.h
+.\output\dynamic.o: ..\FreeRTOS\Common\include\dynamic.h

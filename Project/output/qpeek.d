@@ -1,0 +1,15 @@
+.\output\qpeek.o: ..\FreeRTOS\Common\Minimal\QPeek.c
+.\output\qpeek.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stdlib.h
+.\output\qpeek.o: ..\FreeRTOS\Source\include\FreeRTOS.h
+.\output\qpeek.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stddef.h
+.\output\qpeek.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stdint.h
+.\output\qpeek.o: ..\app\Inc\FreeRTOSConfig.h
+.\output\qpeek.o: ..\FreeRTOS\Source\include\projdefs.h
+.\output\qpeek.o: ..\FreeRTOS\Source\include\portable.h
+.\output\qpeek.o: ..\FreeRTOS\Source\portable\RVDS\ARM_CM3\portmacro.h
+.\output\qpeek.o: ..\FreeRTOS\Source\include\mpu_wrappers.h
+.\output\qpeek.o: ..\FreeRTOS\Source\include\task.h
+.\output\qpeek.o: ..\FreeRTOS\Source\include\list.h
+.\output\qpeek.o: ..\FreeRTOS\Source\include\queue.h
+.\output\qpeek.o: ..\FreeRTOS\Source\include\semphr.h
+.\output\qpeek.o: ..\FreeRTOS\Common\include\QPeek.h

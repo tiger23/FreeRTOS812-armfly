@@ -1,0 +1,13 @@
+.\output\blocktim.o: ..\FreeRTOS\Common\Minimal\blocktim.c
+.\output\blocktim.o: ..\FreeRTOS\Source\include\FreeRTOS.h
+.\output\blocktim.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stddef.h
+.\output\blocktim.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stdint.h
+.\output\blocktim.o: ..\app\Inc\FreeRTOSConfig.h
+.\output\blocktim.o: ..\FreeRTOS\Source\include\projdefs.h
+.\output\blocktim.o: ..\FreeRTOS\Source\include\portable.h
+.\output\blocktim.o: ..\FreeRTOS\Source\portable\RVDS\ARM_CM3\portmacro.h
+.\output\blocktim.o: ..\FreeRTOS\Source\include\mpu_wrappers.h
+.\output\blocktim.o: ..\FreeRTOS\Source\include\task.h
+.\output\blocktim.o: ..\FreeRTOS\Source\include\list.h
+.\output\blocktim.o: ..\FreeRTOS\Source\include\queue.h
+.\output\blocktim.o: ..\FreeRTOS\Common\include\blocktim.h

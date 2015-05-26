@@ -1,0 +1,15 @@
+.\output\genqtest.o: ..\FreeRTOS\Common\Minimal\GenQTest.c
+.\output\genqtest.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stdlib.h
+.\output\genqtest.o: ..\FreeRTOS\Source\include\FreeRTOS.h
+.\output\genqtest.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stddef.h
+.\output\genqtest.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stdint.h
+.\output\genqtest.o: ..\app\Inc\FreeRTOSConfig.h
+.\output\genqtest.o: ..\FreeRTOS\Source\include\projdefs.h
+.\output\genqtest.o: ..\FreeRTOS\Source\include\portable.h
+.\output\genqtest.o: ..\FreeRTOS\Source\portable\RVDS\ARM_CM3\portmacro.h
+.\output\genqtest.o: ..\FreeRTOS\Source\include\mpu_wrappers.h
+.\output\genqtest.o: ..\FreeRTOS\Source\include\task.h
+.\output\genqtest.o: ..\FreeRTOS\Source\include\list.h
+.\output\genqtest.o: ..\FreeRTOS\Source\include\queue.h
+.\output\genqtest.o: ..\FreeRTOS\Source\include\semphr.h
+.\output\genqtest.o: ..\FreeRTOS\Common\include\GenQTest.h

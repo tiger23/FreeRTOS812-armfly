@@ -1,0 +1,14 @@
+.\output\flash.o: ..\FreeRTOS\Common\Minimal\flash.c
+.\output\flash.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stdlib.h
+.\output\flash.o: ..\FreeRTOS\Source\include\FreeRTOS.h
+.\output\flash.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stddef.h
+.\output\flash.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stdint.h
+.\output\flash.o: ..\app\Inc\FreeRTOSConfig.h
+.\output\flash.o: ..\FreeRTOS\Source\include\projdefs.h
+.\output\flash.o: ..\FreeRTOS\Source\include\portable.h
+.\output\flash.o: ..\FreeRTOS\Source\portable\RVDS\ARM_CM3\portmacro.h
+.\output\flash.o: ..\FreeRTOS\Source\include\mpu_wrappers.h
+.\output\flash.o: ..\FreeRTOS\Source\include\task.h
+.\output\flash.o: ..\FreeRTOS\Source\include\list.h
+.\output\flash.o: ..\FreeRTOS\Common\include\partest.h
+.\output\flash.o: ..\FreeRTOS\Common\include\flash.h

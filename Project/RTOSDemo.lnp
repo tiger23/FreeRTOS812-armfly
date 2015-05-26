@@ -23,7 +23,6 @@
 ".\semtest.o"
 ".\comtest.o"
 ".\blockq.o"
-".\croutine.o"
 ".\event_groups.o"
 ".\list.o"
 ".\queue.o"

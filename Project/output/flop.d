@@ -1,0 +1,14 @@
+.\output\flop.o: ..\FreeRTOS\Common\Minimal\flop.c
+.\output\flop.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stdlib.h
+.\output\flop.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\math.h
+.\output\flop.o: ..\FreeRTOS\Source\include\FreeRTOS.h
+.\output\flop.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stddef.h
+.\output\flop.o: f:\Keil_v5\ARM\ARMCC\bin\..\include\stdint.h
+.\output\flop.o: ..\app\Inc\FreeRTOSConfig.h
+.\output\flop.o: ..\FreeRTOS\Source\include\projdefs.h
+.\output\flop.o: ..\FreeRTOS\Source\include\portable.h
+.\output\flop.o: ..\FreeRTOS\Source\portable\RVDS\ARM_CM3\portmacro.h
+.\output\flop.o: ..\FreeRTOS\Source\include\mpu_wrappers.h
+.\output\flop.o: ..\FreeRTOS\Source\include\task.h
+.\output\flop.o: ..\FreeRTOS\Source\include\list.h
+.\output\flop.o: ..\FreeRTOS\Common\include\flop.h
